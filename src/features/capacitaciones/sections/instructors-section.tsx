@@ -11,7 +11,7 @@ export function InstructorsSection() {
 				<SectionHeading
 					eyebrow='CURSO'
 					title='Ellos lo han finalizado'
-					description='Ellos finalizaron la formación de El Método Adulma.'
+					description='Ellos ya hicieron el curso de Formación.'
 				/>
 
 				<div className='mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'>

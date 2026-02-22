@@ -26,7 +26,7 @@ export const metodoRightCards: MethodTextCard[] = [
 	},
 	{
 		id: 'aprender-2',
-		text: 'El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. EL MÉTODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experiméntalo vos mismo.',
+		text: 'El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. EL MÉTODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experimentalo vos mismo.',
 	},
 ];
 
