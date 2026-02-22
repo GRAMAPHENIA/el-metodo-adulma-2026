@@ -9,7 +9,7 @@ Sitio web migrado a **Next.js App Router + TypeScript estricto + Tailwind CSS** 
 - TypeScript estricto
 - Tailwind CSS + design tokens
 - Zod (validacion)
-- Resend (correo transaccional)
+- Formspree (formulario de contacto)
 - Plausible (analitica privacy-first, opcional)
 - pnpm
 
@@ -32,11 +32,6 @@ Crear `.env.local`:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://elmetodoadulma.com
-RESEND_API_KEY=
-CONTACT_TO_EMAIL=
-CONTACT_FROM_EMAIL=
-CONTACT_RATE_LIMIT_WINDOW_MS=60000
-CONTACT_RATE_LIMIT_MAX=5
 PLAUSIBLE_DOMAIN=
 ```
 
@@ -49,7 +44,6 @@ app/
     nosotros/page.tsx
     capacitaciones/page.tsx
     galeria/page.tsx
-  api/contact/route.ts
   robots.ts
   sitemap.ts
   manifest.ts
@@ -72,6 +66,20 @@ src/
 - Formularios con validacion y proteccion anti-spam.
 - Componentes interactivos accesibles por teclado.
 
-## Deploy
+## Deploy estatico (Hostinger)
 
-Proyecto preparado para Vercel SSR/ISR.
+Este proyecto esta configurado con `output: 'export'`, por lo que el build genera una carpeta estatica:
+
+```bash
+pnpm build
+```
+
+Salida:
+
+```text
+out/
+```
+
+Subir todo el contenido de `out/` al `public_html` de Hostinger.
+
+Nota: en modo estatico no hay API backend de Next.js. El formulario de contacto envia directamente a Formspree (`xojnklno`).

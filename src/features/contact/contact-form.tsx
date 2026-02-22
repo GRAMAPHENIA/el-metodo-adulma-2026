@@ -1,20 +1,21 @@
 'use client';
 
+import { ValidationError, useForm } from '@formspree/react';
 import { usePathname } from 'next/navigation';
 import { FormEvent, useMemo, useState } from 'react';
 
 import { Button } from '@/src/components/ui/button';
 import { Container } from '@/src/components/ui/container';
-import type { ContactApiError, ContactApiSuccess } from '@/src/types/api';
 
-type FormState = {
-	status: 'idle' | 'submitting' | 'success' | 'error';
+type LocalFeedbackState = {
+	status: 'idle' | 'error';
 	message: string;
 };
 
 export function ContactForm() {
+	const [formState, submitToFormspree] = useForm('xojnklno');
 	const pathname = usePathname();
-	const [state, setState] = useState<FormState>({
+	const [feedback, setFeedback] = useState<LocalFeedbackState>({
 		status: 'idle',
 		message: '',
 	});
@@ -23,58 +24,45 @@ export function ContactForm() {
 
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const form = event.currentTarget;
-		const formData = new FormData(form);
+		const formData = new FormData(event.currentTarget);
 
-		setState({ status: 'submitting', message: '' });
+		const honeypot = String(formData.get('website') ?? '');
+		const formStartedAt = Number(formData.get('formStartedAt') ?? Date.now());
 
-		const payload = {
-			name: String(formData.get('name') ?? ''),
-			lastName: String(formData.get('lastName') ?? ''),
-			email: String(formData.get('email') ?? ''),
-			phone: String(formData.get('phone') ?? ''),
-			message: String(formData.get('message') ?? ''),
-			sourcePath: pathname || '/',
-			honeypot: String(formData.get('website') ?? ''),
-			formStartedAt: Number(formData.get('formStartedAt') ?? Date.now()),
-		};
-
-		try {
-			const response = await fetch('/api/contact', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(payload),
-			});
-
-			const result = (await response.json()) as ContactApiSuccess | ContactApiError;
-
-			if (!response.ok || !result.ok) {
-				setState({
-					status: 'error',
-					message:
-						'No pudimos enviar tu mensaje en este momento. Intenta nuevamente en unos minutos.',
-				});
-				return;
-			}
-
-			form.reset();
-			setState({
-				status: 'success',
-				message: 'Mensaje enviado correctamente. Te contactaremos a la brevedad.',
-			});
-		} catch {
-			setState({
+		if (honeypot.trim() !== '') {
+			setFeedback({
 				status: 'error',
-				message: 'Ocurrió un error de red. Intenta nuevamente.',
+				message: 'Solicitud inválida.',
 			});
+			return;
 		}
+
+		const elapsed = Date.now() - formStartedAt;
+		if (elapsed < 2500) {
+			setFeedback({
+				status: 'error',
+				message: 'Por favor, espera un momento y vuelve a intentarlo.',
+			});
+			return;
+		}
+
+		setFeedback({ status: 'idle', message: '' });
+		await submitToFormspree(event);
 	};
 
+	const hasFormError = Boolean(
+		formState.errors &&
+		(formState.errors.getFormErrors().length > 0 ||
+			formState.errors.getAllFieldErrors().length > 0),
+	);
+	const message = feedback.message
+		? feedback.message
+		: hasFormError
+			? 'No pudimos enviar tu consulta. Revisa los campos e inténtalo nuevamente.'
+			: '';
+
 	return (
-		<section
-			id='contacto'
-			className='section-spacing bg-surface-base'
-		>
+		<section id='contacto' className='section-spacing bg-surface-base'>
 			<Container>
 				<div className='mx-auto max-w-2xl surface-card p-6 sm:p-8'>
 					<h2 className='text-center text-[length:var(--step-3)] font-bold text-text-primary'>
@@ -84,93 +72,115 @@ export function ContactForm() {
 						Realiza tu consulta y te responderemos a la brevedad.
 					</p>
 
-					<form className='mt-8 space-y-4' onSubmit={onSubmit} noValidate>
-						<div className='grid gap-4 sm:grid-cols-2'>
+					{formState.succeeded ? (
+						<p className='mt-8 text-center text-sm font-semibold text-feedback-success'>
+							Gracias por tu consulta. Te responderemos a la brevedad.
+						</p>
+					) : (
+						<form className='mt-8 space-y-4' onSubmit={onSubmit} noValidate>
+							<div className='grid gap-4 sm:grid-cols-2'>
+								<label className='block'>
+									<span className='mb-1 block text-sm font-semibold text-text-primary'>
+										Nombre
+									</span>
+									<input
+										name='name'
+										required
+										className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
+									/>
+								</label>
+
+								<label className='block'>
+									<span className='mb-1 block text-sm font-semibold text-text-primary'>
+										Apellido
+									</span>
+									<input
+										name='lastName'
+										className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
+									/>
+								</label>
+							</div>
+
 							<label className='block'>
 								<span className='mb-1 block text-sm font-semibold text-text-primary'>
-									Nombre
+									Email
 								</span>
 								<input
-									name='name'
+									type='email'
+									name='email'
 									required
 									className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
 								/>
+								<ValidationError
+									prefix='Email'
+									field='email'
+									errors={formState.errors}
+									className='mt-1 text-sm text-feedback-error'
+								/>
 							</label>
 
 							<label className='block'>
 								<span className='mb-1 block text-sm font-semibold text-text-primary'>
-									Apellido
+									Teléfono
 								</span>
 								<input
-									name='lastName'
+									type='tel'
+									name='phone'
 									className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
 								/>
 							</label>
-						</div>
 
-						<label className='block'>
-							<span className='mb-1 block text-sm font-semibold text-text-primary'>
-								Email
-							</span>
-							<input
-								type='email'
-								name='email'
-								required
-								className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
-							/>
-						</label>
-
-						<label className='block'>
+							<label className='block'>
 								<span className='mb-1 block text-sm font-semibold text-text-primary'>
-									Teléfono
+									Mensaje
 								</span>
+								<textarea
+									name='message'
+									required
+									rows={5}
+									className='w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
+								/>
+								<ValidationError
+									prefix='Mensaje'
+									field='message'
+									errors={formState.errors}
+									className='mt-1 text-sm text-feedback-error'
+								/>
+							</label>
+
 							<input
-								type='tel'
-								name='phone'
-								className='min-h-11 w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
+								type='text'
+								name='website'
+								autoComplete='off'
+								tabIndex={-1}
+								className='hidden'
+								aria-hidden='true'
 							/>
-						</label>
+							<input type='hidden' name='formStartedAt' value={startedAt} />
+							<input type='hidden' name='sourcePath' value={pathname || '/'} />
 
-						<label className='block'>
-							<span className='mb-1 block text-sm font-semibold text-text-primary'>
-								Mensaje
-							</span>
-							<textarea
-								name='message'
-								required
-								rows={5}
-								className='w-full rounded-button border border-border-subtle bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30'
+							<div className='flex flex-wrap items-center gap-4'>
+								<Button type='submit' disabled={formState.submitting}>
+									{formState.submitting ? 'Enviando...' : 'Enviar consulta'}
+								</Button>
+								<p
+									aria-live='polite'
+									className={`text-sm ${
+										feedback.status === 'error' || hasFormError
+											? 'text-feedback-error'
+											: 'text-text-secondary'
+									}`}
+								>
+									{message}
+								</p>
+							</div>
+							<ValidationError
+								prefix='Formulario'
+								errors={formState.errors}
+								className='text-sm text-feedback-error'
 							/>
-						</label>
-
-						<input
-							type='text'
-							name='website'
-							autoComplete='off'
-							tabIndex={-1}
-							className='hidden'
-							aria-hidden='true'
-						/>
-						<input type='hidden' name='formStartedAt' value={startedAt} />
-
-						<div className='flex flex-wrap items-center gap-4'>
-							<Button type='submit' disabled={state.status === 'submitting'}>
-								{state.status === 'submitting' ? 'Enviando...' : 'Enviar consulta'}
-							</Button>
-							<p
-								aria-live='polite'
-								className={`text-sm ${
-									state.status === 'success'
-										? 'text-feedback-success'
-										: state.status === 'error'
-										? 'text-feedback-error'
-										: 'text-text-secondary'
-								}`}
-							>
-								{state.message}
-							</p>
-						</div>
-					</form>
+						</form>
+					)}
 				</div>
 			</Container>
 		</section>
