@@ -120,7 +120,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes y miércoles de 11.00hs a 12.00hs',
+				time: 'Lunes, miércoles y jueves  de 11.00hs a 12.00hs',
 				address: 'Av. Sta. Fe 1773',
 			},
 		],

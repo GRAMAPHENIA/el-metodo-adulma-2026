@@ -2,7 +2,7 @@ import type { CourseInfo, InstructorProfile, MediaAsset } from '@/src/types/cont
 
 export const courseInfo: CourseInfo = {
 	id: 'curso-online',
-	title: 'Curso online para profesionales',
+	title: 'Curso de Formación Virtual',
 	introText:
 		'Formarte para dar clases con el método ADULMA, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.',
 	secondaryText:
@@ -15,7 +15,7 @@ export const courseInfo: CourseInfo = {
 	learnMoreContent: [
 		'Esta formación está orientada a profesionales que deseen ampliar sus oportunidades laborales y contribuir activamente al bienestar de las personas mayores, incorporando estrategias de autocuidado, autovaloración y prevención.',
 		'El abordaje es interdisciplinario y promueve la autonomía, la detección temprana de situaciones de riesgo y el diseño de intervenciones de acompañamiento a lo largo del proceso de envejecimiento.',
-		'Está dirigida a Acompañantes Terapéuticos, Cuidadores, Enfermeros, Profesionales de la salud, Profesores de Educación Física, Kinesiólogos, Fisioterapeutas y especialidades afines.',
+		'Está dirigida a Acompañantes Terapéuticos, Cuidadores, Enfermeros, Profesionales de la salud, Profesores de Educación Física, Kinesiólogos, Fisioterapeutas y preparadores físicos, instructores de Yoga, Pilates, etc.',
 		'La capacitación incluye cómo armar tu propio grupo.',
 	],
 };
