@@ -25,7 +25,7 @@ export const instructorProfiles: InstructorProfile[] = [
 		id: 'juan-alfonso',
 		name: 'Profesor Juan P. Alfonso',
 		image: '/avatar/instructor-uno.webp',
-		role: 'Instructor certificado',
+		role: 'Prof. Ed. Física Coordinador asociado',
 	},
 	{
 		id: 'mariela-trajterman',

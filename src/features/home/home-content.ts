@@ -42,7 +42,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes y miércoles de 11.00hs a 12.00hs',
+				time: 'Lunes y viernes de 10.00hs a 11.00hs',
 				venue: 'CACYP',
 				address: 'Ruta 202 y Balbastro Don Torcuato',
 			},
@@ -108,7 +108,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Jueves de 16.00hs a 17.00hs',
+				time: 'Martes y jueves de 16.00hs a 17.00hs',
 				venue: 'Salón Lobos',
 				address: 'Pedro Ignacio Rivera 757',
 			},
@@ -120,8 +120,19 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes, miércoles y jueves  de 11.00hs a 12.00hs',
+				time: 'Lunes, miércoles y jueves de 11.15hs a 12.15hs',
 				address: 'Av. Sta. Fe 1773',
+			},
+		],
+	},
+	{
+		id: 'munro',
+		location: 'Munro',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Lunes y jueves de 11.15hs a 12.15hs',
+				address: 'Bernardino Rivadavia 2350, Munro',
 			},
 		],
 	},

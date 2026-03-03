@@ -32,9 +32,10 @@ export const metodoRightCards: MethodTextCard[] = [
 
 export const creatorContent = {
 	name: 'Ana T. de León',
-	role: 'Lic. en Enfermería, académica y preparadora física y deportiva, especializada en el adulto mayor y la vejez.',
+	role: 'Coordinadora y directora',
 	image: '/avatar/teresa.png',
 	bio: [
+		'Lic. en Enfermería, académica y preparadora física y deportiva, especializada en el adulto mayor y la vejez.',
 		'Miembro de la Asociación Médica Argentina.',
 		'Ex docente de la Universidad de Buenos Aires, Facultad de Medicina, Escuelas de Enfermería.',
 		'Mujer del año en el partido de Vicente López (2013).',

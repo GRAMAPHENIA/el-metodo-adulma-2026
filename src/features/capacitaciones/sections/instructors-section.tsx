@@ -29,6 +29,9 @@ export function InstructorsSection() {
 							<h3 className='mt-4 text-base font-semibold text-text-primary'>
 								{instructor.name}
 							</h3>
+							{instructor.id === 'juan-alfonso' ? (
+								<p className='mt-2 text-sm text-text-secondary'>{instructor.role}</p>
+							) : null}
 						</article>
 					))}
 				</div>
