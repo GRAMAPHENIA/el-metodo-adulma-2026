@@ -4,6 +4,8 @@
 	--color-brand-surface: 254 230 185; /* #FEE6B9 */
 	--color-brand-ink: 75 56 33; /* #4B3821 */
 	--color-brand-accent: 27 54 92; /* #1B365C */
+	--color-archive-red: 154 56 40; /* #9A3828 */
+	--color-archive-teal: 16 88 84; /* #105854 */
 
 	/* Semantic colors */
 	--color-surface-base: 255 247 234;
@@ -39,7 +41,10 @@
 	--radius-button: 0.75rem;
 	--shadow-card: 0 10px 20px rgba(75, 56, 33, 0.12);
 	--shadow-floating: 0 18px 40px rgba(27, 54, 92, 0.18);
+	--shadow-ink: 0 22px 56px rgba(23, 17, 8, 0.28);
+	--shadow-soft-inset: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 	--ease-standard: cubic-bezier(0.2, 0, 0, 1);
 	--duration-fast: 120ms;
 	--duration-normal: 220ms;
+	--duration-slow: 520ms;
 }

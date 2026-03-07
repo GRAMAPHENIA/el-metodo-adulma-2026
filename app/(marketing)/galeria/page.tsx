@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { ContactForm } from '@/src/features/contact/contact-form';
+import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { PhotoGallerySection } from '@/src/features/galeria/sections/photo-gallery-section';
 import { VideoGallerySection } from '@/src/features/galeria/sections/video-gallery-section';
 import { getBreadcrumbJsonLd } from '@/src/lib/seo/jsonld';
@@ -13,7 +13,7 @@ const seoConfig: SeoPageConfig = {
 	description:
 		'Imágenes y videos de clases, encuentros y capacitaciones de El Método Adulma.',
 	path: '/galeria',
-	keywords: ['galería', 'videos', 'adultos mayores', 'método adulma'],
+	keywords: ['galería', 'videos', 'adultos mayores', 'Método Adulma'],
 };
 
 export const metadata: Metadata = buildPageMetadata(seoConfig);
@@ -35,7 +35,7 @@ export default function GaleriaPage() {
 			/>
 			<PhotoGallerySection />
 			<VideoGallerySection />
-			<ContactForm />
+			<LazyContactForm />
 		</>
 	);
 }

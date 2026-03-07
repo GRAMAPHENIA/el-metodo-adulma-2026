@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { ContactForm } from '@/src/features/contact/contact-form';
+import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { CreatorSection } from '@/src/features/metodo/sections/creator-section';
 import { MethodOverviewSection } from '@/src/features/metodo/sections/method-overview-section';
 import { getBreadcrumbJsonLd } from '@/src/lib/seo/jsonld';
@@ -14,7 +14,7 @@ const seoConfig: SeoPageConfig = {
 		'Conoce los fundamentos de El Método Adulma y el enfoque profesional para adultos mayores.',
 	path: '/nosotros',
 	keywords: [
-		'el método',
+		'El Método',
 		'adulma',
 		'metodología para adultos mayores',
 		'ana t de león',
@@ -40,7 +40,7 @@ export default function NosotrosPage() {
 			/>
 			<MethodOverviewSection />
 			<CreatorSection />
-			<ContactForm />
+			<LazyContactForm />
 		</>
 	);
 }

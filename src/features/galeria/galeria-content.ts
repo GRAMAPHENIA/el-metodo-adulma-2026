@@ -1,7 +1,12 @@
 import type { MediaAsset } from '@/src/types/content';
 
 export const galleryImages: MediaAsset[] = [
-	{ src: '/galeria/imagen1.webp', alt: 'Clase grupal de El Método', width: 1200, height: 900 },
+	{
+		src: '/galeria/imagen1.webp',
+		alt: 'Clase grupal de El Método',
+		width: 1200,
+		height: 900,
+	},
 	{
 		src: '/galeria/imagen2.webp',
 		alt: 'Participantes realizando ejercicios coordinados',
@@ -22,7 +27,7 @@ export const galleryImages: MediaAsset[] = [
 	},
 	{
 		src: '/galeria/imagen5.webp',
-		alt: 'Dinámica grupal del método',
+		alt: 'Dinámica grupal del Método',
 		width: 1200,
 		height: 900,
 	},

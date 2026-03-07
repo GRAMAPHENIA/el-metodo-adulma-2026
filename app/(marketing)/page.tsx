@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { ContactForm } from '@/src/features/contact/contact-form';
+import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { HeroSection } from '@/src/features/home/sections/hero-section';
 import { ScheduleSection } from '@/src/features/home/sections/schedule-section';
 import { TestimonialsSection } from '@/src/features/home/sections/testimonials-section';
@@ -13,7 +13,7 @@ const seoConfig: SeoPageConfig = {
 		'Método integral para adultos mayores con enfoque en movimiento, cognición y bienestar comunitario.',
 	path: '/',
 	keywords: [
-		'método adulma',
+		'Método Adulma',
 		'adultos mayores',
 		'envejecimiento activo',
 		'bienestar',
@@ -29,7 +29,7 @@ export default function HomePage() {
 			<HeroSection />
 			<ScheduleSection />
 			<TestimonialsSection />
-			<ContactForm />
+			<LazyContactForm />
 		</>
 	);
 }

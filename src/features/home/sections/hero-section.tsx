@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
+import { MdArrowOutward } from 'react-icons/md';
 
 import { Container } from '@/src/components/ui/container';
 import { homeHero } from '@/src/features/home/home-content';
@@ -13,53 +14,64 @@ export function HeroSection() {
 	useEffect(() => {
 		const timer = window.setTimeout(() => {
 			setShowVideo(true);
-		}, 1200);
+		}, 700);
 
 		return () => window.clearTimeout(timer);
 	}, []);
 
 	return (
-		<section className='relative isolate overflow-hidden border-b border-border-subtle bg-brand-ink text-text-inverted'>
-			{!showVideo ? (
-				<div
-					className='absolute inset-0 -z-10 animate-pulse bg-gradient-to-br from-brand-ink via-brand-ink/85 to-brand-primary/30'
-					aria-hidden='true'
-				/>
-			) : null}
-			{showVideo ? (
-				<video
-					className='absolute inset-0 -z-10 h-full w-full object-cover opacity-45'
-					autoPlay
-					muted
-					loop
-					playsInline
-					preload='metadata'
-					aria-hidden='true'
-				>
-					<source src={homeHero.videoSrc} type='video/mp4' />
-				</video>
-			) : null}
+		<section className='relative overflow-hidden bg-surface-base'>
+			<div className='pointer-events-none absolute inset-0 z-0 flex items-center justify-center px-6 sm:px-8 lg:px-10'>
+				<div className='relative h-[clamp(18rem,45vw,33rem)] w-full max-w-6xl overflow-hidden rounded-3xl'>
+					{showVideo ? (
+						<video
+							className='h-full w-full object-cover opacity-30'
+							autoPlay
+							muted
+							loop
+							playsInline
+							preload='metadata'
+							poster={homeHero.posterSrc}
+							aria-hidden='true'
+						>
+							<source src={homeHero.videoSrc} type='video/mp4' />
+						</video>
+					) : (
+						<div className='media-skeleton h-full w-full' aria-hidden='true' />
+					)}
+					<div
+						className='absolute inset-0 bg-surface-base/40'
+						aria-hidden='true'
+					/>
+				</div>
+			</div>
 
-			<div
-				className='pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-brand-ink/20 via-brand-ink/60 to-brand-ink'
-				aria-hidden='true'
-			/>
-
-			<Container className='section-spacing'>
-				<div className='mx-auto max-w-3xl text-center fade-up'>
-					<h1 className='text-balance text-[length:var(--step-4)] font-bold'>
+			<Container className='relative z-10 py-[clamp(3.25rem,8vw,6rem)]'>
+				<div className='max-w-3xl'>
+					<p className='fade-up text-sm font-medium tracking-[0.03em] text-brand-accent/85'>
+						El Método Adulma
+					</p>
+					<h1 className='fade-up mt-4 text-balance font-serif text-[clamp(1.9rem,3.7vw,3.2rem)] leading-[1.04] text-text-primary'>
 						{homeHero.title}
 					</h1>
-					<p className='mt-5 text-[length:var(--step-0)] leading-relaxed text-brand-surface'>
+					<p className='fade-up mt-5 max-w-2xl text-[length:var(--step-0)] leading-relaxed text-text-secondary'>
 						{homeHero.description}
 					</p>
-					<div className='mt-8'>
+
+					<div className='fade-up mt-8 flex flex-wrap items-center gap-4'>
 						<Link
 							href={homeHero.ctaHref}
-							className='inline-flex min-h-11 items-center justify-center rounded-button border border-brand-primary bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-surface'
+							className='inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted'
 						>
 							{homeHero.ctaLabel}
+							<MdArrowOutward aria-hidden='true' className='text-base' />
 						</Link>
+						<a
+							href='#contacto'
+							className='inline-flex min-h-11 items-center justify-center rounded-full border border-brand-accent/35 bg-surface-base/65 px-5 py-3 text-sm font-medium text-brand-accent transition hover:bg-brand-primary/18 hover:text-brand-ink hover:backdrop-blur-sm hover:shadow-card'
+						>
+							Solicitar asesoramiento
+						</a>
 					</div>
 				</div>
 			</Container>

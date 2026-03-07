@@ -42,8 +42,20 @@ export function ImageCard({
 	};
 
 	return (
-		<figure className={cn('surface-card relative overflow-hidden', className)}>
-			{!isLoaded ? <div aria-hidden='true' className='media-skeleton absolute inset-0' /> : null}
+		<figure
+			className={cn(
+				'relative overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base shadow-card',
+				className,
+			)}
+		>
+			<div className='relative z-10 flex items-center justify-between border-b border-brand-ink/12 px-3 py-2'>
+				<span className='text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-accent'>
+					Archivo fotografico
+				</span>
+			</div>
+			{!isLoaded ? (
+				<div aria-hidden='true' className='media-skeleton absolute inset-0' />
+			) : null}
 			<Image
 				src={currentSrc}
 				alt={alt}
@@ -52,7 +64,7 @@ export function ImageCard({
 				className={cn(
 					'h-full w-full object-cover transition-opacity duration-300',
 					isLoaded ? 'opacity-100' : 'opacity-0',
-					imageClassName
+					imageClassName,
 				)}
 				loading={priority ? 'eager' : 'lazy'}
 				priority={priority}

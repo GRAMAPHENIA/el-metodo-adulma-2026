@@ -8,9 +8,13 @@ import { navItems, socialLinks } from '@/src/lib/seo/site-config';
 
 export function SiteHeader() {
 	return (
-		<header className='sticky top-0 z-40 border-b border-border-subtle bg-brand-surface'>
-			<Container className='flex min-h-[4.5rem] items-center justify-between gap-4'>
-				<Link href='/' className='inline-flex items-center gap-3' aria-label='Ir a inicio'>
+		<header className='sticky top-0 z-40 border-b border-brand-ink/10 bg-surface-base'>
+			<Container className='flex min-h-[4.75rem] items-center justify-between gap-4'>
+				<Link
+					href='/'
+					className='inline-flex items-center gap-3'
+					aria-label='Ir a inicio'
+				>
 					<Image
 						src='/logoroundedsvg.svg'
 						alt='Logo de El Método Adulma'
@@ -18,20 +22,23 @@ export function SiteHeader() {
 						height={48}
 						priority
 					/>
-					<span className='hidden text-lg font-semibold text-brand-ink sm:inline'>
-						El Método Adulma
+					<span className='hidden sm:block'>
+						<span className='block font-serif text-xl leading-none text-brand-ink'>
+							El Método Adulma
+						</span>
 					</span>
 				</Link>
 
 				<nav className='hidden lg:block' aria-label='Navegación principal'>
-					<ul className='flex items-center gap-6'>
+					<ul className='flex items-center gap-1'>
 						{navItems.map(item => (
 							<li key={item.href}>
 								<Link
 									href={item.href}
-									className='rounded-button px-2 py-1 text-sm font-semibold text-brand-ink transition hover:text-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent'
+									className='group relative rounded-full px-4 py-2 text-sm font-medium tracking-[0.02em] text-brand-ink transition hover:text-brand-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent'
 								>
 									{item.label}
+									<span className='pointer-events-none absolute inset-x-4 bottom-1 h-px origin-left scale-x-0 bg-brand-accent/60 transition-transform duration-300 group-hover:scale-x-100' />
 								</Link>
 							</li>
 						))}
@@ -44,7 +51,7 @@ export function SiteHeader() {
 						target='_blank'
 						rel='noreferrer noopener'
 						aria-label='Instagram de El Método Adulma'
-						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-border-subtle bg-surface-base text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted'
+						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface-base text-base text-brand-ink transition hover:bg-brand-primary/20 hover:text-brand-accent'
 					>
 						<BsInstagram aria-hidden='true' />
 					</a>
@@ -53,7 +60,7 @@ export function SiteHeader() {
 						target='_blank'
 						rel='noreferrer noopener'
 						aria-label='Facebook de El Método Adulma'
-						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-border-subtle bg-surface-base text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted'
+						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface-base text-base text-brand-ink transition hover:bg-brand-primary/20 hover:text-brand-accent'
 					>
 						<BsFacebook aria-hidden='true' />
 					</a>

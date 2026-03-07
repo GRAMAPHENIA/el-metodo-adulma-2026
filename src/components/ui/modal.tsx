@@ -32,9 +32,8 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 			}
 
 			if (event.key === 'Tab' && panelRef.current) {
-				const focusable = panelRef.current.querySelectorAll<HTMLElement>(
-					FOCUSABLE_SELECTOR
-				);
+				const focusable =
+					panelRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR);
 				if (focusable.length === 0) return;
 				const first = focusable[0];
 				const last = focusable[focusable.length - 1];
@@ -63,28 +62,30 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
 	return createPortal(
 		<div
-			className='fixed inset-0 z-[100] bg-brand-ink/80 p-4'
+			className='fixed inset-0 z-[100] bg-brand-ink/80 p-4 backdrop-blur-sm'
 			onClick={onClose}
 		>
 			<div className='flex min-h-full items-start justify-center py-2 sm:items-center'>
 				<div
 					ref={panelRef}
 					className={cn(
-						'surface-card max-h-[calc(100dvh-2.5rem)] w-full max-w-3xl overflow-y-auto p-6 text-text-primary sm:p-8'
+						'max-h-[calc(100dvh-2.5rem)] w-full max-w-3xl overflow-y-auto border border-brand-ink/20 bg-surface-base p-6 text-text-primary shadow-floating sm:p-8',
 					)}
 					role='dialog'
 					aria-modal='true'
 					aria-label={title}
 					onClick={event => event.stopPropagation()}
 				>
-					<div className='mb-4 flex items-center justify-between gap-4'>
-						<h3 className='text-[length:var(--step-2)] font-semibold'>{title}</h3>
+					<div className='mb-4 flex items-center justify-between gap-4 border-b border-brand-ink/15 pb-3'>
+						<h3 className='font-serif text-[length:var(--step-2)] uppercase'>
+							{title}
+						</h3>
 						<button
 							ref={closeRef}
 							type='button'
 							onClick={onClose}
 							aria-label='Cerrar modal'
-							className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-border-strong bg-brand-primary text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2'
+							className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-brand-surface text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2'
 						>
 							<BsXLg aria-hidden='true' />
 						</button>
@@ -93,6 +94,6 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 				</div>
 			</div>
 		</div>,
-		document.body
+		document.body,
 	);
 }
