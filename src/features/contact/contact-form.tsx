@@ -32,7 +32,7 @@ export function ContactForm() {
 		if (honeypot.trim() !== '') {
 			setFeedback({
 				status: 'error',
-				message: 'Solicitud invalida.',
+				message: 'Solicitud inválida.',
 			});
 			return;
 		}
@@ -58,7 +58,7 @@ export function ContactForm() {
 	const message = feedback.message
 		? feedback.message
 		: hasFormError
-			? 'No pudimos enviar tu consulta. Revisa los campos e intentalo nuevamente.'
+			? 'No pudimos enviar tu consulta. Revisá los campos e inténtalo nuevamente.'
 			: '';
 
 	return (
@@ -74,7 +74,7 @@ export function ContactForm() {
 								Contacto
 							</p>
 							<h2 className='mt-3 font-serif text-[clamp(1.85rem,4vw,3rem)] leading-[1.02] text-brand-ink'>
-								Hablemos sobre tu proximo paso
+								Hablemos sobre tu próximo paso
 							</h2>
 							<p className='mt-4 text-sm leading-relaxed text-text-secondary'>
 								Contanos tu consulta y te respondemos con orientación clara para
@@ -137,7 +137,7 @@ export function ContactForm() {
 
 									<label className='block'>
 										<span className='mb-1 block text-[11px] font-medium tracking-[0.03em] text-brand-accent'>
-											Telefono
+											Teléfono
 										</span>
 										<input
 											type='tel'

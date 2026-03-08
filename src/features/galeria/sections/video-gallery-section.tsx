@@ -11,16 +11,24 @@ export function VideoGallerySection() {
 					eyebrow='Videos'
 					title='Momentos en movimiento'
 					description='Clips de clases y actividades de El Método.'
-					className='max-w-4xl text-left'
+					className='max-w-2xl text-left'
 				/>
-				<div className='mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3'>
-					{galleryVideos.map(video => (
-						<VideoCard
+				<div className='mt-4 inline-flex items-center rounded-full border border-brand-ink/14 bg-brand-surface/80 px-3 py-1 text-xs font-semibold text-text-secondary'>
+					{galleryVideos.length} videos destacados
+				</div>
+				<div className='mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3'>
+					{galleryVideos.map((video, index) => (
+						<div
 							key={video.src}
-							src={video.src}
-							className='max-w-none'
-							mediaClassName='aspect-[3/4] max-h-[24rem] bg-brand-ink/95'
-						/>
+							className='reveal-soft'
+							style={{ animationDelay: `${index * 90}ms` }}
+						>
+							<VideoCard
+								src={video.src}
+								className='max-w-none'
+								mediaClassName='h-[22rem]'
+							/>
+						</div>
 					))}
 				</div>
 			</Container>

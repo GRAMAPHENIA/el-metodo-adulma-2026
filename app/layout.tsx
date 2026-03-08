@@ -6,10 +6,6 @@ import { getOrganizationJsonLd, getWebsiteJsonLd } from '@/src/lib/seo/jsonld';
 import { siteConfig } from '@/src/lib/seo/site-config';
 
 import './globals.css';
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const generalSans = localFont({
 	src: '../public/fonts/GeneralSans-Variable.woff2',
@@ -42,8 +38,10 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang='es' suppressHydrationWarning className={cn("font-sans", geist.variable)}>
-			<body className={`${generalSans.variable} ${libreBaskerville.variable} font-sans`}>
+		<html lang='es' suppressHydrationWarning>
+			<body
+				className={`${generalSans.variable} ${libreBaskerville.variable} font-sans`}
+			>
 				<PlausibleScript />
 				<script
 					type='application/ld+json'

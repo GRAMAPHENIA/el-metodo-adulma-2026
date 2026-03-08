@@ -22,7 +22,7 @@ export function TrainingCtaActions({
 
 	return (
 		<>
-			<div className='mt-8 flex flex-wrap items-center gap-4 border-t border-brand-ink/12 pt-5'>
+			<div className='mt-6 flex flex-wrap items-center gap-4'>
 				<LinkButton
 					href={ctaHref}
 					target='_blank'

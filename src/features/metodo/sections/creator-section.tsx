@@ -38,8 +38,7 @@ export function CreatorSection() {
 						</div>
 
 						<div className='p-6 sm:p-8'>
-							<p className='display-kicker'>Perfil profesional</p>
-							<ul className='mt-4 list-disc space-y-3 pl-5 text-base leading-relaxed text-text-primary marker:text-brand-accent'>
+							<ul className='list-disc space-y-3 pl-5 text-base leading-relaxed text-text-primary marker:text-brand-accent'>
 								{creatorContent.bio.map(item => (
 									<li key={item}>{item}</li>
 								))}

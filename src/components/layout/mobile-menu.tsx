@@ -21,7 +21,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
 			<button
 				type='button'
 				onClick={() => setOpen(true)}
-				aria-label='Abrir menu principal'
+				aria-label='Abrir menú principal'
 				className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface-base text-brand-ink transition hover:bg-brand-primary/20 hover:text-brand-accent lg:hidden'
 			>
 				<BsList className='text-2xl' />
@@ -30,7 +30,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
 			<Modal
 				isOpen={open}
 				onClose={() => setOpen(false)}
-				title='Menu principal'
+				title='Menú principal'
 			>
 				<nav aria-label='Navegación móvil'>
 					<ul className='space-y-3'>

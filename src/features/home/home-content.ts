@@ -8,7 +8,6 @@ export const homeHero = {
 	ctaLabel: 'Conoce El Método',
 	ctaHref: '/nosotros',
 	videoSrc: '/videocorto.mp4',
-	posterSrc: '/flyerComienzo.svg',
 };
 
 export const locationCards: LocationCard[] = [

@@ -7,35 +7,30 @@ export function TrainingOverviewSection() {
 	return (
 		<section className='section-spacing relative overflow-hidden bg-surface-base'>
 			<Container className='relative'>
-				<div className='mx-auto max-w-4xl overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base shadow-floating'>
-					<div className='border-b border-brand-ink/12 px-6 py-3 sm:px-8'>
-						<p className='display-kicker'>Dossier de formación</p>
-					</div>
-					<div className='p-6 sm:p-8'>
-						<SectionHeading
-							eyebrow='Capacitaciones'
-							title={courseInfo.title}
-							className='max-w-none text-left'
-						/>
+				<SectionHeading
+					eyebrow='Capacitaciones'
+					title={courseInfo.title}
+					description={courseInfo.introText}
+					className='max-w-4xl text-left'
+				/>
 
-						<p className='mt-8 text-base leading-relaxed lg:text-lg'>
-							{courseInfo.introText}
-						</p>
-						<p className='mt-4 text-base leading-relaxed lg:text-lg'>
-							{courseInfo.secondaryText}
-						</p>
-						<div className='mt-6 rounded-xl border border-brand-primary/35 bg-brand-primary/20 p-4 sm:p-5'>
-							<p className='text-xs leading-relaxed sm:text-sm'>
-								{courseInfo.enrollmentNotice}
-							</p>
-						</div>
-						<TrainingCtaActions
-							ctaHref={courseInfo.ctaHref}
-							ctaLabel={courseInfo.ctaLabel}
-							learnMoreLabel={courseInfo.learnMoreLabel}
-							learnMoreContent={courseInfo.learnMoreContent}
-						/>
-					</div>
+				<p className='mt-4 max-w-3xl text-[length:var(--step-0)] leading-relaxed text-text-secondary/90'>
+					{courseInfo.secondaryText}
+				</p>
+
+				<div className='mt-10 max-w-3xl rounded-2xl bg-brand-primary/20 p-5 sm:p-6'>
+					<p className='text-xs leading-relaxed sm:text-sm'>
+						{courseInfo.enrollmentNotice}
+					</p>
+				</div>
+
+				<div className='max-w-3xl'>
+					<TrainingCtaActions
+						ctaHref={courseInfo.ctaHref}
+						ctaLabel={courseInfo.ctaLabel}
+						learnMoreLabel={courseInfo.learnMoreLabel}
+						learnMoreContent={courseInfo.learnMoreContent}
+					/>
 				</div>
 			</Container>
 		</section>

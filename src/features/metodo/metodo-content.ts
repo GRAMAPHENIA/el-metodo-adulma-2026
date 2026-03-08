@@ -2,6 +2,8 @@ import type { MethodTextCard } from '@/src/types/content';
 
 export const metodoPageContent = {
 	sectionTitle: 'El Método Adulma',
+	sectionDescription:
+		'Conocé por qué este enfoque transforma tanto la enseñanza profesional como la práctica cotidiana en adultos mayores.',
 	leftColumnTitle: '¿Por qué enseñar El Método?',
 	rightColumnTitle: '¿Por qué aprender El Método?',
 	bottomText:

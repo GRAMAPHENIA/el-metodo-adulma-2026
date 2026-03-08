@@ -1,13 +1,32 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
-import { CourseGallerySection } from '@/src/features/capacitaciones/sections/course-gallery-section';
-import { InstructorsSection } from '@/src/features/capacitaciones/sections/instructors-section';
 import { TrainingOverviewSection } from '@/src/features/capacitaciones/sections/training-overview-section';
 import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { getBreadcrumbJsonLd, getCourseJsonLd } from '@/src/lib/seo/jsonld';
 import { buildPageMetadata } from '@/src/lib/seo/metadata';
 import { siteConfig } from '@/src/lib/seo/site-config';
 import type { SeoPageConfig } from '@/src/types/content';
+
+const InstructorsSection = dynamic(
+	() =>
+		import('@/src/features/capacitaciones/sections/instructors-section').then(
+			module => module.InstructorsSection,
+		),
+	{
+		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
+	},
+);
+
+const CourseGallerySection = dynamic(
+	() =>
+		import('@/src/features/capacitaciones/sections/course-gallery-section').then(
+			module => module.CourseGallerySection,
+		),
+	{
+		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
+	},
+);
 
 const seoConfig: SeoPageConfig = {
 	title: 'Capacitaciones',

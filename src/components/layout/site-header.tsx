@@ -20,7 +20,6 @@ export function SiteHeader() {
 						alt='Logo de El Método Adulma'
 						width={48}
 						height={48}
-						priority
 					/>
 					<span className='hidden sm:block'>
 						<span className='block font-serif text-xl leading-none text-brand-ink'>

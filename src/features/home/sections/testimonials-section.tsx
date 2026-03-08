@@ -14,25 +14,21 @@ export function TestimonialsSection() {
 					className='max-w-4xl text-left'
 				/>
 
-				<div className='mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3'>
+				<div className='mt-4 inline-flex items-center rounded-full border border-brand-ink/14 bg-brand-surface/80 px-3 py-1 text-xs font-semibold text-text-secondary'>
+					{testimonialVideos.length} testimonios en video
+				</div>
+
+				<div className='mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3'>
 					{testimonialVideos.map((video, index) => (
 						<div
 							key={video.src}
-							className='reveal-soft relative overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base p-3 shadow-card'
-							style={{ animationDelay: `${index * 110}ms` }}
+							className='reveal-soft'
+							style={{ animationDelay: `${index * 90}ms` }}
 						>
-							<div className='mb-3 flex flex-wrap items-center gap-3'>
-								<p className='text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-accent'>
-									Voz de la comunidad
-								</p>
-								<p className='text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-accent'>
-									Testimonio {String(index + 1).padStart(2, '0')}
-								</p>
-							</div>
 							<VideoCard
 								src={video.src}
-								className='border-brand-ink/14 bg-surface-base shadow-none'
-								mediaClassName='aspect-[3/4] max-h-[24rem] bg-brand-ink/95'
+								className='border-brand-ink/14 bg-surface-base'
+								mediaClassName='h-[22rem]'
 							/>
 						</div>
 					))}

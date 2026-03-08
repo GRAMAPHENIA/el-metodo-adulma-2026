@@ -1,7 +1,3 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
 import Link from 'next/link';
 import { MdArrowOutward } from 'react-icons/md';
 
@@ -9,44 +5,33 @@ import { Container } from '@/src/components/ui/container';
 import { homeHero } from '@/src/features/home/home-content';
 
 export function HeroSection() {
-	const [showVideo, setShowVideo] = useState(false);
-
-	useEffect(() => {
-		const timer = window.setTimeout(() => {
-			setShowVideo(true);
-		}, 700);
-
-		return () => window.clearTimeout(timer);
-	}, []);
-
 	return (
 		<section className='relative overflow-hidden bg-surface-base'>
-			<div className='pointer-events-none absolute inset-0 z-0 flex items-center justify-center px-6 sm:px-8 lg:px-10'>
-				<div className='relative h-[clamp(18rem,45vw,33rem)] w-full max-w-6xl overflow-hidden rounded-3xl'>
-					{showVideo ? (
-						<video
-							className='h-full w-full object-cover opacity-30'
-							autoPlay
-							muted
-							loop
-							playsInline
-							preload='metadata'
-							poster={homeHero.posterSrc}
-							aria-hidden='true'
-						>
-							<source src={homeHero.videoSrc} type='video/mp4' />
-						</video>
-					) : (
-						<div className='media-skeleton h-full w-full' aria-hidden='true' />
-					)}
+			<Container className='pointer-events-none absolute inset-0 z-0 flex items-center justify-center'>
+				<div className='relative h-[clamp(18rem,45vw,33rem)] w-full overflow-hidden rounded-3xl'>
+					<div
+						aria-hidden='true'
+						className='block h-full w-full bg-gradient-to-br from-brand-primary/30 via-brand-surface to-surface-base md:hidden'
+					/>
+					<video
+						className='hidden h-full w-full object-cover opacity-30 md:block'
+						autoPlay
+						muted
+						loop
+						playsInline
+						preload='none'
+						aria-hidden='true'
+					>
+						<source src={homeHero.videoSrc} type='video/mp4' />
+					</video>
 					<div
 						className='absolute inset-0 bg-surface-base/40'
 						aria-hidden='true'
 					/>
 				</div>
-			</div>
+			</Container>
 
-			<Container className='relative z-10 py-[clamp(3.25rem,8vw,6rem)]'>
+			<Container className='relative z-10 py-[clamp(3.25rem,8vw,6rem)] pl-14'>
 				<div className='max-w-3xl'>
 					<p className='fade-up text-sm font-medium tracking-[0.03em] text-brand-accent/85'>
 						El Método Adulma

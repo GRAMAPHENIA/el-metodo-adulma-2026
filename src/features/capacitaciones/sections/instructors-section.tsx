@@ -19,12 +19,9 @@ export function InstructorsSection() {
 					{instructorProfiles.map(instructor => (
 						<article
 							key={instructor.id}
-							className='reveal-soft overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base p-4 text-center shadow-card'
+							className='reveal-soft rounded-2xl border border-brand-ink/10 bg-surface-base p-4 text-center transition-shadow duration-300 hover:shadow-[0_12px_24px_rgba(27,54,92,0.08)] sm:p-5'
 						>
-							<p className='text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-accent'>
-								Instructor
-							</p>
-							<div className='mx-auto mt-3 h-36 w-36 overflow-hidden rounded-full border-2 border-border-strong shadow-[var(--shadow-soft-inset)]'>
+							<div className='mx-auto h-20 w-20 overflow-hidden rounded-full border border-brand-ink/12 bg-brand-primary/10'>
 								<Image
 									src={instructor.image}
 									alt={instructor.name}
@@ -33,11 +30,11 @@ export function InstructorsSection() {
 									className='h-full w-full object-cover'
 								/>
 							</div>
-							<h3 className='mt-4 font-serif text-lg uppercase leading-tight text-text-primary'>
+							<h3 className='mt-3 font-serif text-[length:var(--step-0)] leading-tight text-text-primary'>
 								{instructor.name}
 							</h3>
 							{instructor.id === 'juan-alfonso' ? (
-								<p className='mt-2 text-sm text-text-secondary'>
+								<p className='mt-1 text-sm text-text-secondary'>
 									{instructor.role}
 								</p>
 							) : null}
