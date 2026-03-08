@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
+		"build:hostinger": "pnpm build",
 		"build:static": "next build",
 		"start": "pnpm dlx http-server out -p 3000 -c 31536000",
 		"lint": "eslint .",
@@ -38,7 +39,7 @@
 		"typescript": "^5.7.2"
 	},
 	"engines": {
-		"node": ">=20.11.0"
+		"node": "20.x"
 	},
 	"browserslist": {
 		"production": [
@@ -53,5 +54,5 @@
 			"last 1 safari version"
 		]
 	},
-	"packageManager": "pnpm@9.5.0"
+	"packageManager": "pnpm@10.17.1"
 }

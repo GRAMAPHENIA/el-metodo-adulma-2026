@@ -18,7 +18,7 @@ export function VideoCard({
 	title,
 	className,
 	mediaClassName,
-	preload = 'none',
+	preload = 'metadata',
 }: VideoCardProps) {
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -28,17 +28,21 @@ export function VideoCard({
 		setIsLoaded(false);
 		setHasError(false);
 
-		const fallbackTimer = window.setTimeout(() => {
-			setIsLoaded(true);
-		}, 2000);
-
 		const videoElement = videoRef.current;
-		if (
-			videoElement &&
-			videoElement.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
-		) {
-			setIsLoaded(true);
-		}
+		const syncLoadedState = () => {
+			if (
+				videoElement &&
+				videoElement.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
+			) {
+				setIsLoaded(true);
+			}
+		};
+
+		syncLoadedState();
+
+		const fallbackTimer = window.setTimeout(() => {
+			syncLoadedState();
+		}, 2500);
 
 		return () => window.clearTimeout(fallbackTimer);
 	}, [src]);
@@ -79,7 +83,6 @@ export function VideoCard({
 						isLoaded ? 'opacity-100' : 'opacity-0',
 					)}
 					onLoadedData={() => setIsLoaded(true)}
-					onLoadedMetadata={() => setIsLoaded(true)}
 					onCanPlay={() => setIsLoaded(true)}
 					onError={() => {
 						setHasError(true);
