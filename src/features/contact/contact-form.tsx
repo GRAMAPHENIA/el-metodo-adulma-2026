@@ -67,7 +67,7 @@ export function ContactForm() {
 			className='section-spacing relative overflow-hidden bg-surface-base'
 		>
 			<Container className='relative'>
-				<div className='mx-auto max-w-6xl overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base shadow-floating'>
+				<div className='mx-auto max-w-[76rem] overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base shadow-floating'>
 					<div className='grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.78fr_1.22fr]'>
 						<div className='rounded-2xl bg-brand-primary/18 p-6'>
 							<p className='text-sm font-medium tracking-[0.03em] text-brand-accent'>

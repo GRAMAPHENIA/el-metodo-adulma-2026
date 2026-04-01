@@ -11,20 +11,20 @@ export function TrainingOverviewSection() {
 					eyebrow='Capacitaciones'
 					title={courseInfo.title}
 					description={courseInfo.introText}
-					className='max-w-4xl text-left'
+					className='max-w-[76rem] text-left'
 				/>
 
-				<p className='mt-4 max-w-3xl text-[length:var(--step-0)] leading-relaxed text-text-secondary/90'>
+				<p className='mt-4 max-w-[76rem] text-[length:var(--step-0)] leading-relaxed text-text-secondary/90'>
 					{courseInfo.secondaryText}
 				</p>
 
-				<div className='mt-10 max-w-3xl rounded-2xl bg-brand-primary/20 p-5 sm:p-6'>
+				<div className='mt-10 max-w-[76rem] rounded-2xl bg-brand-primary/20 p-5 sm:p-6'>
 					<p className='text-xs leading-relaxed sm:text-sm'>
 						{courseInfo.enrollmentNotice}
 					</p>
 				</div>
 
-				<div className='max-w-3xl'>
+				<div className='max-w-[76rem]'>
 					<TrainingCtaActions
 						ctaHref={courseInfo.ctaHref}
 						ctaLabel={courseInfo.ctaLabel}

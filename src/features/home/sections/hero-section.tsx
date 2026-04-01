@@ -32,14 +32,14 @@ export function HeroSection() {
 			</Container>
 
 			<Container className='relative z-10 py-[clamp(3.25rem,8vw,6rem)] pl-14'>
-				<div className='max-w-3xl'>
+				<div className='max-w-[76rem]'>
 					<p className='fade-up text-sm font-medium tracking-[0.03em] text-brand-accent/85'>
 						El Método Adulma
 					</p>
 					<h1 className='fade-up mt-4 text-balance font-serif text-[clamp(1.9rem,3.7vw,3.2rem)] leading-[1.04] text-text-primary'>
 						{homeHero.title}
 					</h1>
-					<p className='fade-up mt-5 max-w-2xl text-[length:var(--step-0)] leading-relaxed text-text-secondary'>
+					<p className='fade-up mt-5 max-w-[76rem] text-[length:var(--step-0)] leading-relaxed text-text-secondary'>
 						{homeHero.description}
 					</p>
 

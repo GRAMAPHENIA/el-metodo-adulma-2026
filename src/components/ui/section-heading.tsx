@@ -14,7 +14,9 @@ export function SectionHeading({
 	className,
 }: SectionHeadingProps) {
 	return (
-		<header className={cn(className, 'max-w-4xl !ml-0 !mr-auto !text-left')}>
+		<header
+			className={cn(className, 'max-w-[76rem] !ml-0 !mr-auto !text-left')}
+		>
 			{eyebrow ? (
 				<p className='!text-left text-sm font-medium tracking-[0.03em] text-brand-accent/85'>
 					{eyebrow}
@@ -24,7 +26,7 @@ export function SectionHeading({
 				{title}
 			</h2>
 			{description ? (
-				<p className='mt-4 max-w-3xl !text-left text-[length:var(--step-0)] leading-relaxed text-text-secondary/90'>
+				<p className='mt-4 max-w-[76rem] !text-left text-[length:var(--step-0)] leading-relaxed text-text-secondary/90'>
 					{description}
 				</p>
 			) : null}

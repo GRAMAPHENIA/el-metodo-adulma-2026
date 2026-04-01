@@ -11,7 +11,7 @@ export function VideoGallerySection() {
 					eyebrow='Videos'
 					title='Momentos en movimiento'
 					description='Clips de clases y actividades de El Método.'
-					className='max-w-2xl text-left'
+					className='max-w-[76rem] text-left'
 				/>
 				<div className='mt-4 inline-flex items-center rounded-full border border-brand-ink/14 bg-brand-surface/80 px-3 py-1 text-xs font-semibold text-text-secondary'>
 					{galleryVideos.length} videos destacados

@@ -17,6 +17,7 @@ export type LocationCard = {
 	scheduleTitle: string;
 	schedules: {
 		time: string;
+		times?: string[];
 		venue?: string;
 		note?: string;
 		address: string;

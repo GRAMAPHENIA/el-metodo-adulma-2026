@@ -26,7 +26,7 @@ export function MethodOverviewSection() {
 					eyebrow='El Método'
 					title={metodoPageContent.sectionTitle}
 					description={metodoPageContent.sectionDescription}
-					className='max-w-5xl text-left'
+					className='max-w-[76rem] text-left'
 				/>
 
 				<div className='mt-8 space-y-6 lg:hidden'>
@@ -47,7 +47,7 @@ export function MethodOverviewSection() {
 					</div>
 				</div>
 
-				<div className='mx-auto mt-8 hidden max-w-6xl items-stretch gap-6 lg:grid lg:grid-cols-2'>
+				<div className='mx-auto mt-8 hidden max-w-[76rem] items-stretch gap-6 lg:grid lg:grid-cols-2'>
 					<h3 className='flex min-h-16 items-center justify-center overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base px-5 py-3 text-center font-serif text-[length:var(--step-2)] leading-[0.95] text-brand-accent shadow-card'>
 						{metodoPageContent.leftColumnTitle}
 					</h3>
@@ -60,7 +60,7 @@ export function MethodOverviewSection() {
 					<MethodTextCard text={metodoRightCards[1]?.text ?? ''} />
 				</div>
 
-				<div className='mx-auto mt-10 max-w-6xl'>
+				<div className='mx-auto mt-10 max-w-[76rem]'>
 					<MethodTextCard text={metodoPageContent.bottomText} />
 				</div>
 			</Container>

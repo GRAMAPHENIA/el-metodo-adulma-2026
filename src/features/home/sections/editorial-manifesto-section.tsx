@@ -32,7 +32,7 @@ export function EditorialManifestoSection() {
 					eyebrow='Cuaderno de enfoque'
 					title='Una metodología clara, humana y medible.'
 					description='Combinamos trabajo corporal, estímulo cognitivo y acompañamiento grupal para mejorar autonomía funcional y calidad de vida.'
-					className='max-w-4xl text-left'
+					className='max-w-[76rem] text-left'
 				/>
 
 				<div className='mt-12 grid gap-6 md:grid-cols-3'>

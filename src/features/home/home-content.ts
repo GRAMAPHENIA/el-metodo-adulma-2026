@@ -70,7 +70,8 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Martes y viernes de 9:45hs a 10.45hs y de 11.00hs a 12.00hs',
+				time: 'Martes y viernes ',
+				times: ['9.40hs a 10.40hs', '10.50hs a 11.50hs', '12.00hs a 13.00hs'],
 				venue: 'La Redonda de Belgrano',
 				note: 'Entrada por secretaría parroquial',
 				address: 'Vuelta de Obligado 2042 Belgrano',
@@ -119,7 +120,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes, miércoles y jueves de 11.15hs a 12.15hs',
+				time: 'Lunes y jueves de 11.15hs a 12.15hs',
 				address: 'Av. Sta. Fe 1773',
 			},
 		],

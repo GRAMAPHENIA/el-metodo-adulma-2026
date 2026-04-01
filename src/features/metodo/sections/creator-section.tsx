@@ -14,10 +14,10 @@ export function CreatorSection() {
 					eyebrow='Creadora'
 					title={creatorContent.name}
 					description={creatorContent.role}
-					className='max-w-6xl'
+					className='max-w-[76rem]'
 				/>
 
-				<div className='mx-auto mt-10 max-w-6xl overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base shadow-card'>
+				<div className='mx-auto mt-10 max-w-[76rem] overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base shadow-card'>
 					<div className='grid items-stretch gap-0 md:grid-cols-[14rem_1fr]'>
 						<div className='flex flex-col items-center justify-center border-b border-brand-ink/10 bg-brand-primary/12 p-6 text-center md:border-b-0 md:border-r'>
 							<div className='w-fit overflow-hidden rounded-full'>

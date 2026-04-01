@@ -71,7 +71,7 @@ src/
 Este proyecto esta configurado con `output: 'export'`, por lo que el build genera una carpeta estatica:
 
 ```bash
-pnpm build
+pnpm build:hostinger
 ```
 
 Salida:
@@ -80,6 +80,37 @@ Salida:
 out/
 ```
 
-Subir todo el contenido de `out/` al `public_html` de Hostinger.
+Subir todo el contenido de `out/` al `public_html` de Hostinger (no la carpeta `out`, sino su contenido).
 
-Nota: en modo estatico no hay API backend de Next.js. El formulario de contacto envia directamente a Formspree (`xojnklno`).
+### Checklist rapido de produccion
+
+1. Ejecutar build local:
+
+```bash
+pnpm install --frozen-lockfile
+pnpm build:hostinger
+```
+
+2. Verificar localmente el sitio exportado:
+
+```bash
+pnpm start
+```
+
+3. En Hostinger (hPanel):
+
+- Ir a `Administrador de archivos` -> `public_html`.
+- Borrar o mover archivos viejos del sitio.
+- Subir el contenido de `out/`.
+- Confirmar que `.htaccess` quede en la raiz de `public_html`.
+
+4. Limpiar cache del navegador/CDN y validar:
+
+- Home, Capacitaciones, Galeria, Nosotros, Contacto.
+- Videos y formulario.
+
+### Notas importantes
+
+- En modo estatico no hay API backend de Next.js.
+- El formulario de contacto envia directamente a Formspree.
+- El repo incluye `public/.htaccess` con reglas de cache y compresion para Hostinger (Apache).

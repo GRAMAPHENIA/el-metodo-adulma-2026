@@ -8,7 +8,7 @@ export function SiteFooter() {
 
 	return (
 		<footer
-			className='mt-12 border-t border-brand-primary/25 bg-brand-ink py-14 text-brand-surface lg:mt-16'
+			className='mt-12 border-t border-brand-primary/25 bg-[#392e21] py-14 text-brand-surface lg:mt-16'
 			id='footer'
 		>
 			<Container className='grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]'>
