@@ -30,7 +30,6 @@ export function SiteFooter() {
 						Desde 2004, movimiento y neuroplasticidad para un envejecimiento
 						activo.
 					</p>
-					<p className='mt-5 text-xs text-brand-surface/70'>MUGA {year}</p>
 				</section>
 
 				<section aria-labelledby='footer-explorar'>
@@ -119,7 +118,18 @@ export function SiteFooter() {
 			</Container>
 
 			<div className='mt-10 border-t border-brand-surface/20 pt-4 text-center text-xs text-brand-surface/70'>
-				Copyright {year} El Método Adulma. Todos los derechos reservados.
+				Copyright {year} El Método Adulma. Todos los derechos reservados.{' '}
+				<span className='inline-block'>
+					desarrollado por{' '}
+					<a
+						href='https://muga.dev'
+						target='_blank'
+						rel='noreferrer noopener'
+						className='font-medium text-brand-surface/70 underline-offset-4 transition hover:text-brand-primary hover:underline'
+					>
+						muga.dev
+					</a>
+				</span>
 			</div>
 		</footer>
 	);

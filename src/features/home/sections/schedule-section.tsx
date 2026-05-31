@@ -76,7 +76,7 @@ export function ScheduleSection() {
 				{hiddenCards.length > 0 ? (
 					<details className='group mt-8'>
 						<summary className='flex list-none justify-center'>
-							<div className='inline-flex min-h-11 items-center justify-center rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold tracking-[0.03em] text-brand-ink shadow-[var(--shadow-soft-inset)] transition duration-[var(--duration-normal)] ease-[var(--ease-standard)] group-open:bg-brand-accent group-open:text-text-inverted'>
+							<div className='inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold tracking-[0.03em] text-brand-ink shadow-[var(--shadow-soft-inset)] transition duration-[var(--duration-normal)] ease-[var(--ease-standard)] group-open:bg-brand-accent group-open:text-text-inverted'>
 								<span className='group-open:hidden'>Ver más salones</span>
 								<span className='hidden group-open:inline'>Ver menos salones</span>
 							</div>
