@@ -10,6 +10,10 @@ export function SiteFooter() {
 		<footer
 			className='mt-12 border-t border-brand-primary/25 bg-[#392e21] py-14 text-brand-surface lg:mt-16'
 			id='footer'
+			style={{
+				contentVisibility: 'auto',
+				containIntrinsicSize: '1200px',
+			}}
 		>
 			<Container className='grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]'>
 				<section aria-labelledby='footer-manifiesto'>
@@ -98,10 +102,10 @@ export function SiteFooter() {
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
 						Se deja constancia que EL MÉTODO ADULMA es impartido de manera
 						directa por la Lic. Ana T. de León, creadora del mismo, en el salón
-						de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 11.00
-						a 12.00 hs, y en el salón de La Redonda de Belgrano, sito en Vuelta
+						de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs
+						a 10.45hs, y en el salón de La Redonda de Belgrano, sito en Vuelta
 						de Obligado 2042, barrio de Belgrano, ingresando por Secretaría
-						Parroquial, los días martes y viernes de 11.00 a 12.00 hs.
+						Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de 12.00hs a 13.00hs.
 					</p>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
 						Las personas que figuran en esta página han concurrido y finalizado

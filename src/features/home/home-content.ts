@@ -8,6 +8,7 @@ export const homeHero = {
 	ctaLabel: 'Conoce El Método',
 	ctaHref: '/nosotros',
 	videoSrc: '/videocorto.mp4',
+	poster: '/videocorto.webp',
 };
 
 export const locationCards: LocationCard[] = [
@@ -58,7 +59,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Miércoles y viernes de 10.00hs a 11.00hs',
+				time: 'Lunes de 11.00hs a 12.00hs y Miércoles y viernes de 10.00hs a 11.00hs ',
 				venue: 'Amigos de Florida',
 				address: 'Gral. San Martín 2442 Florida',
 			},
@@ -88,17 +89,6 @@ export const locationCards: LocationCard[] = [
 				venue: 'Sociedad Italiana de Tigre',
 				note: 'Entrada por galería',
 				address: 'Av. Cazón 1336 Tigre',
-			},
-		],
-	},
-	{
-		id: 'saavedra',
-		location: 'Saavedra',
-		scheduleTitle: 'Horarios',
-		schedules: [
-			{
-				time: 'Lunes y jueves de 15:45hs a 16:45hs',
-				address: 'Jaramillo 3055 CABA',
 			},
 		],
 	},
@@ -136,10 +126,35 @@ export const locationCards: LocationCard[] = [
 			},
 		],
 	},
+	{
+		id: 'el-talar',
+		location: 'El Talar',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Lunes y miércoles de 15.15hs a 16.15hs',
+				venue: 'Iglesia Medalla Milagrosa',
+				note: 'Ingreso por Pasteur',
+				address: 'Las Heras 1839',
+			},
+		],
+	},
 ];
 
 export const testimonialVideos: MediaAsset[] = [
-	{ src: '/testimonios/testimonio1.mp4', alt: 'Testimonio en video 1' },
-	{ src: '/testimonios/testimonio2.mp4', alt: 'Testimonio en video 2' },
-	{ src: '/testimonios/testimonio3.mp4', alt: 'Testimonio en video 3' },
+	{
+		src: '/testimonios/testimonio1.mp4',
+		poster: '/testimonios/testimonio1.webp',
+		alt: 'Testimonio en video 1',
+	},
+	{
+		src: '/testimonios/testimonio2.mp4',
+		poster: '/testimonios/testimonio2.webp',
+		alt: 'Testimonio en video 2',
+	},
+	{
+		src: '/testimonios/testimonio3.mp4',
+		poster: '/testimonios/testimonio3.webp',
+		alt: 'Testimonio en video 3',
+	},
 ];

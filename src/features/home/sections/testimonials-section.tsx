@@ -5,12 +5,18 @@ import { testimonialVideos } from '@/src/features/home/home-content';
 
 export function TestimonialsSection() {
 	return (
-		<section className='section-spacing relative overflow-hidden bg-surface-base'>
+		<section
+			className='section-spacing relative overflow-hidden bg-surface-base'
+			style={{
+				contentVisibility: 'auto',
+				containIntrinsicSize: '1200px',
+			}}
+		>
 			<Container className='relative'>
 				<SectionHeading
 					eyebrow='Testimonios'
 					title='Experiencias reales'
-					description='Relatos de quienes forman parte de nuestras clases.'
+					description='Relatos de quienes participan en las clases.'
 					className='max-w-[76rem] text-left'
 				/>
 
@@ -27,6 +33,7 @@ export function TestimonialsSection() {
 						>
 							<VideoCard
 								src={video.src}
+								poster={video.poster}
 								className='border-brand-ink/14 bg-surface-base'
 								mediaClassName='h-[22rem]'
 							/>

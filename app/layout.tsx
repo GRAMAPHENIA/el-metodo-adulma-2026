@@ -14,7 +14,7 @@ const generalSans = localFont({
 });
 
 const libreBaskerville = localFont({
-	src: '../src/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf',
+	src: '../src/fonts/Libre_Baskerville/LibreBaskerville-Regular.woff2',
 	variable: '--font-libre-baskerville',
 	display: 'swap',
 });
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 	description: siteConfig.description,
 	applicationName: siteConfig.name,
 	authors: [{ name: 'El Método Adulma' }],
-	icons: [{ rel: 'icon', url: '/logoroundedsvg.svg' }],
+	icons: [{ rel: 'icon', url: '/logo-navbar.webp' }],
 	formatDetection: {
 		telephone: false,
 	},

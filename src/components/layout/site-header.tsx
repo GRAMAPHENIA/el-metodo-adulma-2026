@@ -16,10 +16,12 @@ export function SiteHeader() {
 					aria-label='Ir a inicio'
 				>
 					<Image
-						src='/logoroundedsvg.svg'
+						src='/logo-navbar.webp'
 						alt='Logo de El Método Adulma'
-						width={48}
-						height={48}
+						width={240}
+						height={125}
+						className='h-12 w-auto rounded-2xl'
+						priority
 					/>
 					<span className='hidden sm:block'>
 						<span className='block font-serif text-xl leading-none text-brand-ink'>

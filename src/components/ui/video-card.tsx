@@ -1,13 +1,10 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
-
 import { getVideoType } from '@/src/lib/media/video';
 import { cn } from '@/src/lib/utils/cn';
 
 type VideoCardProps = {
 	src: string;
 	title?: string;
+	poster?: string;
 	className?: string;
 	mediaClassName?: string;
 	preload?: 'none' | 'metadata' | 'auto';
@@ -16,37 +13,11 @@ type VideoCardProps = {
 export function VideoCard({
 	src,
 	title,
+	poster,
 	className,
 	mediaClassName,
-	preload = 'metadata',
+	preload = 'none',
 }: VideoCardProps) {
-	const videoRef = useRef<HTMLVideoElement | null>(null);
-	const [isLoaded, setIsLoaded] = useState(false);
-	const [hasError, setHasError] = useState(false);
-
-	useEffect(() => {
-		setIsLoaded(false);
-		setHasError(false);
-
-		const videoElement = videoRef.current;
-		const syncLoadedState = () => {
-			if (
-				videoElement &&
-				videoElement.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
-			) {
-				setIsLoaded(true);
-			}
-		};
-
-		syncLoadedState();
-
-		const fallbackTimer = window.setTimeout(() => {
-			syncLoadedState();
-		}, 2500);
-
-		return () => window.clearTimeout(fallbackTimer);
-	}, [src]);
-
 	return (
 		<figure
 			className={cn(
@@ -60,9 +31,6 @@ export function VideoCard({
 					mediaClassName,
 				)}
 			>
-				{!isLoaded ? (
-					<div aria-hidden='true' className='media-skeleton absolute inset-0' />
-				) : null}
 				<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-36 bg-gradient-to-t from-brand-ink/82 via-brand-ink/38 to-transparent' />
 				<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-14 shadow-[inset_0_-36px_40px_-20px_rgba(0,0,0,0.75)]' />
 				{title ? (
@@ -73,37 +41,18 @@ export function VideoCard({
 					</p>
 				) : null}
 				<video
-					ref={videoRef}
 					controls
 					playsInline
 					preload={preload}
+					poster={poster}
 					aria-label={title ?? 'Video de la galería'}
 					className={cn(
-						'relative z-[2] block h-full w-full object-cover object-center saturate-[.6] brightness-[.96] contrast-[1.04] transition-[opacity,filter] duration-500 group-hover:saturate-100 group-hover:brightness-100 group-hover:contrast-100',
-						isLoaded ? 'opacity-100' : 'opacity-0',
+						'relative z-[2] block h-full w-full object-cover object-center saturate-[.72] brightness-[.98] contrast-[1.02] group-hover:saturate-100 group-hover:brightness-100 group-hover:contrast-100',
 					)}
-					onLoadedData={() => setIsLoaded(true)}
-					onCanPlay={() => setIsLoaded(true)}
-					onError={() => {
-						setHasError(true);
-						setIsLoaded(true);
-					}}
 				>
-					<source
-						src={src}
-						type={getVideoType(src)}
-						onError={() => {
-							setHasError(true);
-							setIsLoaded(true);
-						}}
-					/>
+					<source src={src} type={getVideoType(src)} />
 					Tu navegador no soporta videos.
 				</video>
-				{hasError ? (
-					<div className='absolute inset-0 z-20 grid place-content-center bg-brand-ink/70 px-6 text-center text-sm font-medium text-white'>
-						No pudimos cargar este video.
-					</div>
-				) : null}
 			</div>
 		</figure>
 	);

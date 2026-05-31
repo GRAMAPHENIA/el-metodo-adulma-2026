@@ -3,112 +3,12 @@
 	width: min(100% - 2rem, 76rem);
 }
 
-.surface-card {
-	border: 1px solid rgb(var(--color-border-subtle));
-	border-radius: var(--radius-card);
-	background: rgb(var(--color-brand-surface));
-	box-shadow: var(--shadow-soft-inset), var(--shadow-card);
-}
-
-.surface-panel {
-	border: 1px solid rgb(var(--color-border-subtle));
-	border-radius: var(--radius-card);
-	background: rgb(var(--color-surface-base));
-}
-
 .section-spacing {
 	padding-block: var(--space-2xl);
 }
 
-.fade-up {
-	animation: fade-up 550ms var(--ease-standard) both;
-}
-
 .reveal-soft {
 	animation: reveal-soft var(--duration-slow) var(--ease-standard) both;
-}
-
-.frame-lines {
-	position: relative;
-	border: 1px solid rgba(27, 54, 92, 0.18);
-	box-shadow:
-		var(--shadow-soft-inset),
-		0 10px 24px rgba(27, 54, 92, 0.08);
-}
-
-.display-kicker {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.4rem;
-	font-size: 11px;
-	font-weight: 600;
-	letter-spacing: 0.06em;
-	color: rgb(var(--color-brand-accent));
-}
-
-.display-kicker::before,
-.display-kicker::after {
-	content: none;
-}
-
-.editorial-grid {
-	background-image:
-		linear-gradient(rgba(27, 54, 92, 0.08) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(27, 54, 92, 0.08) 1px, transparent 1px);
-	background-size: 32px 32px;
-}
-
-.film-card {
-	border: 1px solid rgba(27, 54, 92, 0.16);
-	border-radius: 1rem;
-	background:
-		linear-gradient(
-			145deg,
-			rgba(255, 255, 255, 0.8),
-			rgba(255, 255, 255, 0.45)
-		),
-		rgba(255, 247, 234, 0.82);
-	box-shadow: 0 16px 34px rgba(27, 54, 92, 0.13);
-}
-
-.media-skeleton {
-	background: linear-gradient(
-		110deg,
-		rgba(255, 238, 206, 0.7) 8%,
-		rgba(253, 178, 89, 0.45) 18%,
-		rgba(255, 238, 206, 0.7) 33%
-	);
-	background-size: 200% 100%;
-	animation: media-skeleton-shimmer 1.3s linear infinite;
-}
-
-.editorial-marquee {
-	overflow: hidden;
-	mask-image: linear-gradient(
-		to right,
-		transparent 0%,
-		black 12%,
-		black 88%,
-		transparent 100%
-	);
-}
-
-.editorial-marquee-track {
-	display: inline-flex;
-	min-width: max-content;
-	gap: clamp(1.75rem, 3.5vw, 3rem);
-	animation: editorial-marquee 24s linear infinite;
-}
-
-@keyframes fade-up {
-	from {
-		opacity: 0;
-		transform: translateY(14px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }
 
 @keyframes reveal-soft {
@@ -119,20 +19,5 @@
 	to {
 		opacity: 1;
 		transform: translateY(0) scale(1);
-	}
-}
-
-@keyframes media-skeleton-shimmer {
-	to {
-		background-position-x: -200%;
-	}
-}
-
-@keyframes editorial-marquee {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-50%);
 	}
 }

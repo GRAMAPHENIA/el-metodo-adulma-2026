@@ -11,7 +11,7 @@ export function PlausibleScript() {
 			defer
 			data-domain={plausible.domain}
 			src={plausible.src}
-			strategy='afterInteractive'
+			strategy='lazyOnload'
 		/>
 	);
 }

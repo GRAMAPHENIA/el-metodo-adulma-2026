@@ -58,8 +58,16 @@ export const instructorProfiles: InstructorProfile[] = [
 ];
 
 export const courseGalleryMedia: MediaAsset[] = [
-	{ src: '/1cap.mp4', alt: 'Video de capacitación 1' },
-	{ src: '/2cap.mp4', alt: 'Video de capacitación 2' },
+	{
+		src: '/1cap.mp4',
+		poster: '/1cap.webp',
+		alt: 'Video de capacitación 1',
+	},
+	{
+		src: '/2cap.mp4',
+		poster: '/2cap.webp',
+		alt: 'Video de capacitación 2',
+	},
 	{
 		src: '/4cap.webp',
 		alt: 'Imagen de capacitaciones grupales',

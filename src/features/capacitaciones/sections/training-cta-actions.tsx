@@ -1,9 +1,20 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 
 import { Button, LinkButton } from '@/src/components/ui/button';
-import { Modal } from '@/src/components/ui/modal';
+
+const TrainingLearnMorePanel = dynamic(
+	() =>
+		import('@/src/features/capacitaciones/sections/training-learn-more-panel').then(
+			module => module.TrainingLearnMorePanel,
+		),
+	{
+		ssr: false,
+		loading: () => null,
+	},
+);
 
 type TrainingCtaActionsProps = {
 	ctaHref: string;
@@ -40,17 +51,11 @@ export function TrainingCtaActions({
 				</Button>
 			</div>
 
-			<Modal
+			<TrainingLearnMorePanel
 				isOpen={isLearnMoreOpen}
 				onClose={() => setIsLearnMoreOpen(false)}
-				title='Sobre la capacitación'
-			>
-				<div className='space-y-4 text-sm leading-relaxed sm:text-base'>
-					{learnMoreContent.map((paragraph, index) => (
-						<p key={`${index}-${paragraph.slice(0, 24)}`}>{paragraph}</p>
-					))}
-				</div>
-			</Modal>
+				content={learnMoreContent}
+			/>
 		</>
 	);
 }

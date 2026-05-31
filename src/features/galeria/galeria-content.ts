@@ -44,7 +44,7 @@ export const galleryImages: MediaAsset[] = [
 		height: 900,
 	},
 	{
-		src: '/galeria/imagen8.png',
+		src: '/galeria/imagen8.webp',
 		alt: 'Momento destacado de actividad Adulma',
 		width: 1200,
 		height: 900,
@@ -58,7 +58,19 @@ export const galleryImages: MediaAsset[] = [
 ];
 
 export const galleryVideos: MediaAsset[] = [
-	{ src: '/galeria-videos/001.mp4', alt: 'Video de galería 2' },
-	{ src: '/galeria-videos/04.mp4', alt: 'Video de galería 4' },
-	{ src: '/galeria-videos/05.mp4', alt: 'Video de galería 5' },
+	{
+		src: '/galeria-videos/001.mp4',
+		poster: '/galeria-videos/001.webp',
+		alt: 'Video de galería 2',
+	},
+	{
+		src: '/galeria-videos/04.mp4',
+		poster: '/galeria-videos/04.webp',
+		alt: 'Video de galería 4',
+	},
+	{
+		src: '/galeria-videos/05.mp4',
+		poster: '/galeria-videos/05.webp',
+		alt: 'Video de galería 5',
+	},
 ];

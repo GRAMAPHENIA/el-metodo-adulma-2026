@@ -25,3 +25,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# Local optimization artifacts
+backups/
+.tmp/

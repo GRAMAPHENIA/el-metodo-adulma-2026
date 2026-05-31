@@ -7,7 +7,7 @@ export const metodoPageContent = {
 	leftColumnTitle: '¿Por qué enseñar El Método?',
 	rightColumnTitle: '¿Por qué aprender El Método?',
 	bottomText:
-		'Hace más de 25 años que se trabaja con adultos mayores y se realiza un trabajo de investigación siempre consultando grupos de trabajo interdisciplinario de médicos clínicos, cardiólogos, gerontólogos, neurólogos, psiquiatras, psicólogos, kinesiólogos, profesores de educación física, nutricionistas, siempre actualizado, porque EL MÉTODO ADULMA® no espera épocas mejores, EL MÉTODO ADULMA® hace mejores las épocas.',
+		'Hace más de 25 años adultos mayores toman clases con EL MÉTODO ADULMA® donde se realiza un trabajo de investigación siempre consultando grupos de trabajo interdisciplinario de médicos clínicos, cardiólogos, gerontólogos, neurólogos, psiquiatras, psicólogos, kinesiólogos, profesores de educación física, nutricionistas, siempre actualizado, porque EL MÉTODO ADULMA® no espera épocas mejores, EL MÉTODO ADULMA® hace mejores las épocas.',
 };
 
 export const metodoLeftCards: MethodTextCard[] = [
@@ -35,7 +35,7 @@ export const metodoRightCards: MethodTextCard[] = [
 export const creatorContent = {
 	name: 'Ana T. de León',
 	role: 'Coordinadora y directora',
-	image: '/avatar/teresa.png',
+	image: '/avatar/teresa.webp',
 	bio: [
 		'Lic. en Enfermería, académica y preparadora física y deportiva, especializada en el adulto mayor y la vejez.',
 		'Miembro de la Asociación Médica Argentina.',

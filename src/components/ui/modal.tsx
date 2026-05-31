@@ -12,9 +12,16 @@ type ModalProps = {
 	onClose: () => void;
 	title: string;
 	children: React.ReactNode;
+	fullScreenMobile?: boolean;
 };
 
-export function Modal({ isOpen, onClose, title, children }: ModalProps) {
+export function Modal({
+	isOpen,
+	onClose,
+	title,
+	children,
+	fullScreenMobile = false,
+}: ModalProps) {
 	const panelRef = useRef<HTMLDivElement>(null);
 	const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -62,14 +69,16 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
 	return createPortal(
 		<div
-			className='fixed inset-0 z-[100] bg-brand-ink/80 p-4 backdrop-blur-sm'
+			className='fixed inset-0 z-[100] bg-brand-ink/80 backdrop-blur-sm sm:p-4'
 			onClick={onClose}
 		>
-			<div className='flex min-h-full items-start justify-center py-2 sm:items-center'>
+			<div className='flex min-h-full items-stretch justify-center sm:items-center'>
 				<div
 					ref={panelRef}
 					className={cn(
-						'max-h-[calc(100dvh-2.5rem)] w-full max-w-3xl overflow-y-auto border border-brand-ink/20 bg-surface-base p-6 text-text-primary shadow-floating sm:p-8',
+						fullScreenMobile
+							? 'h-[100dvh] w-full overflow-y-auto border-0 bg-surface-base p-5 text-text-primary shadow-none sm:max-h-[calc(100dvh-2.5rem)] sm:max-w-3xl sm:border sm:border-brand-ink/20 sm:p-8 sm:shadow-floating'
+							: 'max-h-[calc(100dvh-2.5rem)] w-full max-w-3xl overflow-y-auto border border-brand-ink/20 bg-surface-base p-6 text-text-primary shadow-floating sm:p-8',
 					)}
 					role='dialog'
 					aria-modal='true'

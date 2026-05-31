@@ -11,7 +11,7 @@ export function getOrganizationJsonLd() {
 		'@type': 'Organization',
 		name: siteConfig.name,
 		url: siteConfig.domain,
-		logo: `${siteConfig.domain}/logoroundedsvg.svg`,
+		logo: `${siteConfig.domain}/logo-navbar.webp`,
 		sameAs: [socialLinks.instagram, socialLinks.facebook],
 		description: siteConfig.description,
 	};

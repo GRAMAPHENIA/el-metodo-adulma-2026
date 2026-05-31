@@ -25,6 +25,7 @@ export function VideoGallerySection() {
 						>
 							<VideoCard
 								src={video.src}
+								poster={video.poster}
 								className='max-w-none'
 								mediaClassName='h-[22rem]'
 							/>

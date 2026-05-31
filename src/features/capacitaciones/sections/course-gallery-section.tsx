@@ -22,7 +22,7 @@ export function CourseGallerySection() {
 			<Container className='relative'>
 				<SectionHeading
 					eyebrow='Galería de capacitaciones'
-					title='Experiencias de nuestras capacitaciones'
+					title='Experiencias en capacitaciones del Método'
 					description='Así se vive cada encuentro: aprendizaje activo, trabajo en equipo y herramientas aplicables desde el primer día.'
 					className='max-w-[76rem] text-left'
 				/>
@@ -43,6 +43,7 @@ export function CourseGallerySection() {
 						>
 							<VideoCard
 								src={video.src}
+								poster={video.poster}
 								className='max-w-none'
 								mediaClassName='h-[22rem]'
 							/>

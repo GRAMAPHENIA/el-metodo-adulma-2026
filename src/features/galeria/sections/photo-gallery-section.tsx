@@ -18,7 +18,7 @@ export function PhotoGallerySection() {
 			<Container className='relative'>
 				<SectionHeading
 					eyebrow='Galería'
-					title='Imágenes de nuestras actividades'
+					title='Imágenes de clases y actividades'
 					description='Registro de clases y encuentros.'
 					className='max-w-[76rem] text-left'
 				/>
