@@ -33,7 +33,7 @@ export const metodoRightCards: MethodTextCard[] = [
 ];
 
 export const creatorContent = {
-	name: 'Ana T. de León',
+	name: 'Lic. Ana T. de León',
 	role: 'Coordinadora y directora',
 	image: '/avatar/teresa.webp',
 	bio: [

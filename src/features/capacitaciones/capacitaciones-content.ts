@@ -3,6 +3,7 @@ import type {
 	InstructorProfile,
 	MediaAsset,
 } from '@/src/types/content';
+import { creatorContent } from '@/src/features/metodo/metodo-content';
 
 export const courseInfo: CourseInfo = {
 	id: 'curso-online',
@@ -25,6 +26,12 @@ export const courseInfo: CourseInfo = {
 };
 
 export const instructorProfiles: InstructorProfile[] = [
+	{
+		id: 'ana-t-de-leon',
+		name: creatorContent.name,
+		image: creatorContent.image,
+		role: 'Creadora de EL MÉTODO ADULMA',
+	},
 	{
 		id: 'juan-alfonso',
 		name: 'Profesor Juan P. Alfonso',
@@ -53,6 +60,12 @@ export const instructorProfiles: InstructorProfile[] = [
 		id: 'araceli-pane',
 		name: 'Araceli E. Pane',
 		image: '/avatar/instructor-cinco.webp',
+		role: 'Instructora certificada',
+	},
+	{
+		id: 'yanina-r-florentin',
+		name: 'Yanina R. Florentin',
+		image: '/avatar/instructor-seis.png',
 		role: 'Instructora certificada',
 	},
 ];
