@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
+import { CreatorSection } from '@/src/features/metodo/sections/creator-section';
 import { TrainingOverviewSection } from '@/src/features/capacitaciones/sections/training-overview-section';
 import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { getBreadcrumbJsonLd, getCourseJsonLd } from '@/src/lib/seo/jsonld';
@@ -68,6 +69,7 @@ export default function CapacitacionesPage() {
 				}}
 			/>
 			<TrainingOverviewSection />
+			<CreatorSection />
 			<InstructorsSection />
 			<CourseGallerySection />
 			<LazyContactForm />
