@@ -34,12 +34,11 @@ export const metodoRightCards: MethodTextCard[] = [
 
 export const creatorContent = {
 	name: 'Lic. Ana T. de León',
-	role: 'Coordinadora y directora',
+	role: 'Coordinadora y Directora',
 	image: '/avatar/teresa.webp',
 	bio: [
-		'Licenciada en Enfermería.',
 		'Miembro de la Asociación Médica Argentina.',
-		'Ex docente de la Universidad de Buenos Aires, Facultad de Medicina, Escuelas de Enfermería.',
+		'Docente.',
 	],
-	cvUrl: '/cvAna-comprimido.pdf',
+	cvUrl: '/cv-ana.pdf',
 };
