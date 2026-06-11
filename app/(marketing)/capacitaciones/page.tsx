@@ -69,7 +69,7 @@ export default function CapacitacionesPage() {
 				}}
 			/>
 			<TrainingOverviewSection />
-			<CreatorSection />
+			<CreatorSection mode='training' />
 			<InstructorsSection />
 			<CourseGallerySection />
 			<LazyContactForm />
