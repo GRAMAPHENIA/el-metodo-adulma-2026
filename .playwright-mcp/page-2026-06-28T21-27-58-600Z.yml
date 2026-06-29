@@ -1,0 +1,146 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Ir a inicio" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Logo de El Método Adulma" [ref=e6]
+        - generic [ref=e7]: El Método Adulma
+      - navigation "Navegación principal" [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Inicio" [ref=e11] [cursor=pointer]:
+              - /url: /
+              - text: Inicio
+          - listitem [ref=e12]:
+            - link "El Método" [ref=e13] [cursor=pointer]:
+              - /url: /nosotros/
+              - text: El Método
+          - listitem [ref=e14]:
+            - link "Capacitaciones" [ref=e15] [cursor=pointer]:
+              - /url: /capacitaciones/
+              - text: Capacitaciones
+          - listitem [ref=e16]:
+            - link "Galería" [ref=e17] [cursor=pointer]:
+              - /url: /galeria/
+              - text: Galería
+          - listitem [ref=e18]:
+            - link "Contacto" [ref=e19] [cursor=pointer]:
+              - /url: /#contacto
+              - text: Contacto
+      - generic [ref=e20]:
+        - link "Instagram de El Método Adulma" [ref=e21] [cursor=pointer]:
+          - /url: https://www.instagram.com/elmetodoadulma/
+          - img [ref=e22]
+        - link "Facebook de El Método Adulma" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/El.metodo.adulma
+          - img [ref=e25]
+        - button "Abrir menú principal" [ref=e27]:
+          - img [ref=e28]
+  - main [ref=e30]:
+    - heading "El Método Adulma" [level=1] [ref=e31]
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: El Método
+        - heading "El Método Adulma" [level=2] [ref=e36]
+        - paragraph [ref=e37]: Conocé por qué este enfoque transforma tanto la enseñanza profesional como la práctica cotidiana en adultos mayores.
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - heading "¿Por qué enseñar El Método?" [level=3] [ref=e40]
+          - article [ref=e41]:
+            - paragraph [ref=e43]: Porque EL MÉTODO ADULMA®, creado en el año 2004, es un conjunto de elementos, actividades, temas y asuntos, que competen a los adultos mayores, para que proyectos, ideas y ganas de vivir la vida, puedan llevarlos a cabo todos y cada uno cuando está bien enseñado.
+          - article [ref=e44]:
+            - paragraph [ref=e46]: EL MÉTODO ADULMA® apuesta a sus capacidades, sin subestimar aptitudes, virtudes y cualidades, desafiándolos siempre a ir por más, como la gente real de las imágenes de esta web, todos ellos practican EL MÉTODO ADULMA®.
+        - generic [ref=e47]:
+          - heading "¿Por qué aprender El Método?" [level=3] [ref=e48]
+          - article [ref=e49]:
+            - paragraph [ref=e51]: Porque EL MÉTODO ADULMA® recupera habilidades perdidas, enlentecidas, mentes desorientadas, cuerpos rígidos y todo lo que el Adulto Mayor comienza a experimentar avanzado el paso de los años. Entonces, ¿la prevención en la vejez es factible? ¡Sí, y podemos estar preparados y tener una vejez saludable e independiente.
+          - article [ref=e52]:
+            - paragraph [ref=e54]: "El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. EL MÉTODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experiméntalo vos mismo."
+      - generic [ref=e55]:
+        - heading "¿Por qué enseñar El Método?" [level=3] [ref=e56]
+        - heading "¿Por qué aprender El Método?" [level=3] [ref=e57]
+        - article [ref=e58]:
+          - paragraph [ref=e60]: Porque EL MÉTODO ADULMA®, creado en el año 2004, es un conjunto de elementos, actividades, temas y asuntos, que competen a los adultos mayores, para que proyectos, ideas y ganas de vivir la vida, puedan llevarlos a cabo todos y cada uno cuando está bien enseñado.
+        - article [ref=e61]:
+          - paragraph [ref=e63]: Porque EL MÉTODO ADULMA® recupera habilidades perdidas, enlentecidas, mentes desorientadas, cuerpos rígidos y todo lo que el Adulto Mayor comienza a experimentar avanzado el paso de los años. Entonces, ¿la prevención en la vejez es factible? ¡Sí, y podemos estar preparados y tener una vejez saludable e independiente.
+        - article [ref=e64]:
+          - paragraph [ref=e66]: EL MÉTODO ADULMA® apuesta a sus capacidades, sin subestimar aptitudes, virtudes y cualidades, desafiándolos siempre a ir por más, como la gente real de las imágenes de esta web, todos ellos practican EL MÉTODO ADULMA®.
+        - article [ref=e67]:
+          - paragraph [ref=e69]: "El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. EL MÉTODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experiméntalo vos mismo."
+      - article [ref=e71]:
+        - paragraph [ref=e73]: Hace más de 25 años adultos mayores toman clases con EL MÉTODO ADULMA® donde se realiza un trabajo de investigación siempre consultando grupos de trabajo interdisciplinario de médicos clínicos, cardiólogos, gerontólogos, neurólogos, psiquiatras, psicólogos, kinesiólogos, profesores de educación física, nutricionistas, siempre actualizado, porque EL MÉTODO ADULMA® no espera épocas mejores, EL MÉTODO ADULMA® hace mejores las épocas.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - paragraph [ref=e77]: Creadora
+        - heading "Lic. Ana T. de León" [level=2] [ref=e78]
+        - paragraph [ref=e79]: Coordinadora y directora
+      - article [ref=e81]:
+        - img "Lic. Ana T. de León" [ref=e83]
+        - generic [ref=e84]:
+          - heading "Lic. Ana T. de León" [level=3] [ref=e85]
+          - paragraph [ref=e86]: Coordinadora y Directora
+        - list [ref=e87]:
+          - listitem [ref=e88]:
+            - img [ref=e89]
+            - text: Miembro de la Asociación Médica Argentina.
+          - listitem [ref=e92]:
+            - img [ref=e93]
+            - text: Docente.
+        - link "Ver currículum completo" [ref=e97] [cursor=pointer]:
+          - /url: /cv-ana.pdf
+          - generic [ref=e98]:
+            - img [ref=e99]
+            - text: Ver currículum completo
+    - region "Formulario de contacto" [ref=e101]:
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: Contacto
+        - heading "Hablemos sobre tu próximo paso" [level=2] [ref=e107]
+        - paragraph [ref=e108]: Solicitá tu consulta con orientación clara para clases o realizar el Curso de Formación.
+  - contentinfo [ref=e109]:
+    - generic [ref=e110]:
+      - region "Para profesionales y para adultos mayores." [ref=e111]:
+        - paragraph [ref=e112]: El Método Adulma
+        - heading "Para profesionales y para adultos mayores." [level=2] [ref=e113]
+        - paragraph [ref=e114]: Desde 2004, movimiento y neuroplasticidad para un envejecimiento activo.
+      - region "Navegación" [ref=e115]:
+        - heading "Navegación" [level=2] [ref=e116]
+        - list [ref=e117]:
+          - listitem [ref=e118]:
+            - link "Inicio" [ref=e119] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e120]:
+            - link "El Método" [ref=e121] [cursor=pointer]:
+              - /url: /nosotros/
+          - listitem [ref=e122]:
+            - link "Capacitaciones" [ref=e123] [cursor=pointer]:
+              - /url: /capacitaciones/
+          - listitem [ref=e124]:
+            - link "Galería" [ref=e125] [cursor=pointer]:
+              - /url: /galeria/
+          - listitem [ref=e126]:
+            - link "Contacto" [ref=e127] [cursor=pointer]:
+              - /url: /#contacto
+      - region "Contacto" [ref=e128]:
+        - heading "Contacto" [level=2] [ref=e129]
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - link "adulmaelmetodo@gmail.com" [ref=e132] [cursor=pointer]:
+              - /url: mailto:adulmaelmetodo@gmail.com
+          - listitem [ref=e133]:
+            - link "Instagram" [ref=e134] [cursor=pointer]:
+              - /url: https://www.instagram.com/elmetodoadulma/
+          - listitem [ref=e135]:
+            - link "Facebook" [ref=e136] [cursor=pointer]:
+              - /url: https://www.facebook.com/El.metodo.adulma
+    - generic [ref=e138]:
+      - heading "Información legal" [level=3] [ref=e139]
+      - paragraph [ref=e140]: Se deja constancia que EL MÉTODO ADULMA es impartido de manera directa por la Lic. Ana T. de León, creadora del mismo, en el salón de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs a 10.45hs, y en el salón de La Redonda de Belgrano, sito en Vuelta de Obligado 2042, barrio de Belgrano, ingresando por Secretaría Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de 12.00hs a 13.00hs.
+      - paragraph [ref=e141]: Las personas que figuran en esta página han concurrido y finalizado el curso de Formación de EL MÉTODO ADULMA. La aplicación y transmisión de los conocimientos adquiridos durante la cursada por parte de dichos instructores se realiza bajo su exclusiva responsabilidad, siendo los únicos pasibles de las acciones que pudieran derivarse de su práctica profesional.
+    - generic [ref=e142]:
+      - text: Copyright 2026 El Método Adulma. Todos los derechos reservados.
+      - generic [ref=e143]:
+        - text: desarrollado por
+        - link "muga.dev" [ref=e144] [cursor=pointer]:
+          - /url: https://muga.dev

@@ -1,0 +1,231 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Ir a inicio" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Logo de El Método Adulma" [ref=e6]
+        - generic [ref=e8]: El Método Adulma
+      - navigation "Navegación principal" [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "Inicio" [ref=e12] [cursor=pointer]:
+              - /url: /
+              - text: Inicio
+          - listitem [ref=e13]:
+            - link "El Método" [ref=e14] [cursor=pointer]:
+              - /url: /nosotros/
+              - text: El Método
+          - listitem [ref=e15]:
+            - link "Capacitaciones" [ref=e16] [cursor=pointer]:
+              - /url: /capacitaciones/
+              - text: Capacitaciones
+          - listitem [ref=e17]:
+            - link "Galería" [ref=e18] [cursor=pointer]:
+              - /url: /galeria/
+              - text: Galería
+          - listitem [ref=e19]:
+            - link "Contacto" [ref=e20] [cursor=pointer]:
+              - /url: /#contacto
+              - text: Contacto
+      - generic [ref=e21]:
+        - link "Instagram de El Método Adulma" [ref=e22] [cursor=pointer]:
+          - /url: https://www.instagram.com/elmetodoadulma/
+          - img [ref=e23]
+        - link "Facebook de El Método Adulma" [ref=e25] [cursor=pointer]:
+          - /url: https://www.facebook.com/El.metodo.adulma
+          - img [ref=e26]
+  - main [ref=e28]:
+    - heading "Capacitaciones de El Método Adulma" [level=1] [ref=e29]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: Capacitaciones
+        - heading "Curso de Formación Virtual" [level=2] [ref=e34]
+        - paragraph [ref=e35]: Formarte para dar clases con el Método ADULMA, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.
+      - paragraph [ref=e36]: Al hacerlo, vas a cultivar no solo herramientas para promover la autonomía y la calidad de vida —es decir, el bienestar de las personas mayores—, sino también la enorme satisfacción de contribuir a transformar vidas.
+      - paragraph [ref=e38]: "\"Aquellos alumnos del exterior que estén interesados en inscribirse pueden hacerlo abonando con tarjeta de débito o crédito. El monto que se les descuenta va a depender del cambio de la moneda, pero sí, deben calcular su moneda a pesos argentinos. También puede ocurrir que algunos bancos rechacen la transacción ya que deben notificarles previamente de la compra (esto último va a depender de cada banco y sus normativas). Recomiendo que, si algún interesado del exterior no puede realizar el pago, primero consulte con su banco.\""
+      - generic [ref=e40]:
+        - link "Programa e información" [ref=e41] [cursor=pointer]:
+          - /url: https://www.ama-med.org.ar/especialidades/detalleCurso/701
+        - button "Saber más" [ref=e42] [cursor=pointer]
+    - generic [ref=e45]:
+      - article [ref=e46]:
+        - img "Lic. Ana T. de León" [ref=e48]
+        - generic [ref=e49]:
+          - heading "Lic. Ana T. de León" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Coordinadora y Directora
+        - list [ref=e53]:
+          - listitem [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e58]: Miembro de la Asociación Médica Argentina.
+          - listitem [ref=e59]:
+            - img [ref=e60]
+            - generic [ref=e63]: Docente.
+        - link "Ver currículum completo" [ref=e65] [cursor=pointer]:
+          - /url: /cv-ana.pdf
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - text: Ver currículum completo
+      - article [ref=e69]:
+        - img "Profesor Juan P. Alfonso" [ref=e71]
+        - generic [ref=e72]:
+          - heading "Profesor Juan P. Alfonso" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Profesor de Educación Física, Coordinador.
+        - list [ref=e76]:
+          - listitem [ref=e77]:
+            - img [ref=e78]
+            - generic [ref=e81]: Con certificación en la formación de la Asociación Médica Argentina
+          - listitem [ref=e82]:
+            - img [ref=e83]
+            - generic [ref=e86]: Con certificación en primeros auxilios
+    - generic [ref=e88]:
+      - generic [ref=e89]:
+        - paragraph [ref=e90]: CURSO
+        - heading "Ellos lo han finalizado" [level=2] [ref=e91]
+        - paragraph [ref=e92]: "Ellos han finalizado con éxito los siguientes cursos certificados:"
+      - generic [ref=e93]:
+        - article [ref=e94]:
+          - img "Mariela Trajterman" [ref=e96]
+          - generic [ref=e97]:
+            - heading "Mariela Trajterman" [level=3] [ref=e98]
+            - paragraph [ref=e99]: Instructora certificada
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - img [ref=e103]
+              - generic [ref=e106]: Con certificación en la formación de la Asociación Médica Argentina
+        - article [ref=e107]:
+          - img "Mirta Gakbart" [ref=e109]
+          - generic [ref=e110]:
+            - heading "Mirta Gakbart" [level=3] [ref=e111]
+            - paragraph [ref=e112]: Instructora certificada
+          - list [ref=e114]:
+            - listitem [ref=e115]:
+              - img [ref=e116]
+              - generic [ref=e119]: Con certificación en la formación de la Asociación Médica Argentina
+            - listitem [ref=e120]:
+              - img [ref=e121]
+              - generic [ref=e124]: Jornada presencial, herramientas en salud del adulto mayor
+            - listitem [ref=e125]:
+              - img [ref=e126]
+              - generic [ref=e129]: Con certificación en primeros auxilios
+        - article [ref=e130]:
+          - img "Manuela Miretti" [ref=e132]
+          - generic [ref=e133]:
+            - heading "Manuela Miretti" [level=3] [ref=e134]
+            - paragraph [ref=e135]: Instructora certificada
+          - list [ref=e137]:
+            - listitem [ref=e138]:
+              - img [ref=e139]
+              - generic [ref=e142]: Con certificación en la formación de la Asociación Médica Argentina
+        - article [ref=e143]:
+          - img "Araceli E. Pane" [ref=e145]
+          - generic [ref=e146]:
+            - heading "Araceli E. Pane" [level=3] [ref=e147]
+            - paragraph [ref=e148]: Instructora certificada
+          - list [ref=e150]:
+            - listitem [ref=e151]:
+              - img [ref=e152]
+              - generic [ref=e155]: Con certificación en la formación de la Asociación Médica Argentina
+            - listitem [ref=e156]:
+              - img [ref=e157]
+              - generic [ref=e160]: Jornada presencial, herramientas en salud del adulto mayor
+            - listitem [ref=e161]:
+              - img [ref=e162]
+              - generic [ref=e165]: Con certificación en primeros auxilios
+        - article [ref=e166]:
+          - img "Yanina R. Florentin" [ref=e168]
+          - generic [ref=e169]:
+            - heading "Yanina R. Florentin" [level=3] [ref=e170]
+            - paragraph [ref=e171]: Instructora certificada
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - img [ref=e175]
+              - generic [ref=e178]: Con certificación en la formación de la Asociación Médica Argentina
+        - article [ref=e179]:
+          - img "Claudia Varela" [ref=e181]
+          - generic [ref=e182]:
+            - heading "Claudia Varela" [level=3] [ref=e183]
+            - paragraph [ref=e184]: Instructora certificada
+          - list [ref=e186]:
+            - listitem [ref=e187]:
+              - img [ref=e188]
+              - generic [ref=e191]: Con certificación en la formación de la Asociación Médica Argentina
+    - generic [ref=e193]:
+      - generic [ref=e194]:
+        - paragraph [ref=e195]: Galería de capacitaciones
+        - heading "Experiencias en capacitaciones del Método" [level=2] [ref=e196]
+        - paragraph [ref=e197]: "Así se vive cada encuentro: aprendizaje activo, trabajo en equipo y herramientas aplicables desde el primer día."
+      - generic [ref=e198]: 2 videos + 6 imágenes de capacitaciones
+      - heading "Videos" [level=3] [ref=e199]
+      - generic [ref=e200]:
+        - figure [ref=e202]:
+          - generic "Video de la galería" [ref=e204]: Tu navegador no soporta videos.
+        - figure [ref=e206]:
+          - generic "Video de la galería" [ref=e208]: Tu navegador no soporta videos.
+      - generic [ref=e209]:
+        - heading "Fotos" [level=3] [ref=e210]
+        - generic [ref=e211]:
+          - figure [ref=e213]:
+            - img "Imagen de capacitaciones grupales" [ref=e214]
+          - figure [ref=e216]:
+            - img "Imagen de práctica en capacitaciones" [ref=e217]
+          - figure [ref=e219]:
+            - img "Imagen de clase de capacitación" [ref=e220]
+          - figure [ref=e222]:
+            - img "Imagen de formación profesional 1" [ref=e223]
+          - figure [ref=e225]:
+            - img "Imagen de formación profesional 2" [ref=e226]
+          - figure [ref=e228]:
+            - img "Imagen de formación profesional 3" [ref=e229]
+    - region "Formulario de contacto" [ref=e230]:
+      - generic [ref=e234]:
+        - paragraph [ref=e235]: Contacto
+        - heading "Hablemos sobre tu próximo paso" [level=2] [ref=e236]
+        - paragraph [ref=e237]: Solicitá tu consulta con orientación clara para clases o realizar el Curso de Formación.
+  - contentinfo [ref=e240]:
+    - generic [ref=e241]:
+      - region "Para profesionales y para adultos mayores." [ref=e242]:
+        - paragraph [ref=e243]: El Método Adulma
+        - heading "Para profesionales y para adultos mayores." [level=2] [ref=e244]
+        - paragraph [ref=e245]: Desde 2004, movimiento y neuroplasticidad para un envejecimiento activo.
+      - region "Navegación" [ref=e246]:
+        - heading "Navegación" [level=2] [ref=e247]
+        - list [ref=e248]:
+          - listitem [ref=e249]:
+            - link "Inicio" [ref=e250] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e251]:
+            - link "El Método" [ref=e252] [cursor=pointer]:
+              - /url: /nosotros/
+          - listitem [ref=e253]:
+            - link "Capacitaciones" [ref=e254] [cursor=pointer]:
+              - /url: /capacitaciones/
+          - listitem [ref=e255]:
+            - link "Galería" [ref=e256] [cursor=pointer]:
+              - /url: /galeria/
+          - listitem [ref=e257]:
+            - link "Contacto" [ref=e258] [cursor=pointer]:
+              - /url: /#contacto
+      - region "Contacto" [ref=e259]:
+        - heading "Contacto" [level=2] [ref=e260]
+        - list [ref=e261]:
+          - listitem [ref=e262]:
+            - link "adulmaelmetodo@gmail.com" [ref=e263] [cursor=pointer]:
+              - /url: mailto:adulmaelmetodo@gmail.com
+          - listitem [ref=e264]:
+            - link "Instagram" [ref=e265] [cursor=pointer]:
+              - /url: https://www.instagram.com/elmetodoadulma/
+          - listitem [ref=e266]:
+            - link "Facebook" [ref=e267] [cursor=pointer]:
+              - /url: https://www.facebook.com/El.metodo.adulma
+    - generic [ref=e269]:
+      - heading "Información legal" [level=3] [ref=e270]
+      - paragraph [ref=e271]: Se deja constancia que EL MÉTODO ADULMA es impartido de manera directa por la Lic. Ana T. de León, creadora del mismo, en el salón de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs a 10.45hs, y en el salón de La Redonda de Belgrano, sito en Vuelta de Obligado 2042, barrio de Belgrano, ingresando por Secretaría Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de 12.00hs a 13.00hs.
+      - paragraph [ref=e272]: Las personas que figuran en esta página han concurrido y finalizado el curso de Formación de EL MÉTODO ADULMA. La aplicación y transmisión de los conocimientos adquiridos durante la cursada por parte de dichos instructores se realiza bajo su exclusiva responsabilidad, siendo los únicos pasibles de las acciones que pudieran derivarse de su práctica profesional.
+    - generic [ref=e273]:
+      - text: Copyright 2026 El Método Adulma. Todos los derechos reservados.
+      - generic [ref=e274]:
+        - text: desarrollado por
+        - link "muga.dev" [ref=e275] [cursor=pointer]:
+          - /url: https://muga.dev

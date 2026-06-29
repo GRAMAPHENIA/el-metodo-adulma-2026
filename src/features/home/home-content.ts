@@ -18,7 +18,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horario de mañana',
 		schedules: [
 			{
-				time: 'Lunes y jueves de 9.45hs a 10.45hs',
+				time: 'Lunes y jueves de 10.30hs a 11.30hs',
 				venue: 'Salón al fondo',
 				address: 'R. Gutiérrez 1372 Olivos',
 			},

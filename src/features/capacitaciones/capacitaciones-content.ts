@@ -65,7 +65,7 @@ export const instructorProfiles: InstructorProfile[] = [
 	{
 		id: 'yanina-r-florentin',
 		name: 'Yanina R. Florentin',
-		image: '/avatar/instructor-seis.png',
+		image: '/avatar/instructor-seis.webp',
 		role: 'Instructora certificada',
 	},
 ];

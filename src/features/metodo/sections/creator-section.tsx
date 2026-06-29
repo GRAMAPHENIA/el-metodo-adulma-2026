@@ -78,15 +78,20 @@ export function CreatorSection({
 
 					{showAssociateCard && associateContent ? (
 						<article className='reveal-soft relative flex flex-col items-start rounded-2xl border border-brand-ink/12 bg-surface-base p-5 transition-shadow duration-300 hover:shadow-[0_12px_24px_rgba(27,54,92,0.08)] sm:p-6'>
-							<div className='aspect-square h-[4.75rem] w-[4.75rem] shrink-0 overflow-hidden rounded-2xl bg-transparent'>
-								<Image
-									src={associateContent.image}
-									alt={associateContent.name}
-									width={200}
-									height={200}
-									className='h-full w-full object-cover object-center'
-								/>
-							</div>
+						<div className='aspect-square h-[4.75rem] w-[4.75rem] shrink-0 overflow-hidden rounded-2xl bg-transparent'>
+							<Image
+								src={associateContent.image}
+								alt={associateContent.name}
+								width={200}
+								height={200}
+								className='h-full w-full object-cover object-center'
+								style={
+									associateContent.id === 'juan-alfonso'
+										? { transform: 'scale(1.22)' }
+										: undefined
+								}
+							/>
+						</div>
 							<div className='mt-4 flex flex-col items-start'>
 								<h3 className='font-serif text-xl leading-tight text-text-primary'>
 									{associateContent.name}

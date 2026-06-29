@@ -20,6 +20,12 @@ const elderHealthJornadaInstructorIds = new Set([
 	'mirta-gakbart',
 ]);
 
+const amaCertifiedInstructorIds = new Set([
+	'mirta-gakbart',
+	'araceli-pane',
+	'yanina-r-florentin',
+]);
+
 export function InstructorsSection() {
 	return (
 		<section className='section-spacing relative overflow-hidden bg-surface-base'>
@@ -60,31 +66,40 @@ export function InstructorsSection() {
 							</div>
 							<div className='mt-3 h-px w-full bg-brand-ink/10' />
 							<ul className='mt-3 flex w-full list-none flex-col items-start gap-1 p-0 m-0'>
-							<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
-								<MdVerified
-									aria-hidden='true'
-									className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
-								/>
-								<span className='min-w-0 whitespace-normal break-words'>Con certificación en EL METODO ADULMA presencial</span>
-							</li>
-							{elderHealthJornadaInstructorIds.has(instructor.id) ? (
 								<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
 									<MdVerified
 										aria-hidden='true'
 										className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
 									/>
-									<span className='min-w-0 whitespace-normal break-words'>Jornada presencial, herramientas en salud del adulto mayor</span>
+									<span className='min-w-0 whitespace-normal break-words'>Con certificación en EL METODO ADULMA presencial</span>
 								</li>
-							) : null}
-							{firstAidCertifiedInstructorIds.has(instructor.id) ? (
-								<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
-									<MdVerified
-										aria-hidden='true'
-										className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
-									/>
-									<span className='min-w-0 whitespace-normal break-words'>Con certificación en primeros auxilios</span>
-								</li>
-							) : null}
+								{elderHealthJornadaInstructorIds.has(instructor.id) ? (
+									<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
+										<MdVerified
+											aria-hidden='true'
+											className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
+										/>
+										<span className='min-w-0 whitespace-normal break-words'>Jornada presencial, herramientas en salud del adulto mayor</span>
+									</li>
+								) : null}
+								{firstAidCertifiedInstructorIds.has(instructor.id) ? (
+									<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
+										<MdVerified
+											aria-hidden='true'
+											className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
+										/>
+										<span className='min-w-0 whitespace-normal break-words'>Con certificación en primeros auxilios</span>
+									</li>
+								) : null}
+								{amaCertifiedInstructorIds.has(instructor.id) ? (
+									<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
+										<MdVerified
+											aria-hidden='true'
+											className='h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary'
+										/>
+										<span className='min-w-0 whitespace-normal break-words'>Con certificación en la formación de la Asociación Médica Argentina</span>
+									</li>
+								) : null}
 							</ul>
 						</article>
 					))}
