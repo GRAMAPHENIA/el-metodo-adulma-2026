@@ -13,9 +13,13 @@ const photoAspectVariants = [
 	'aspect-[4/3] xl:aspect-[16/10]',
 ];
 
+const featuredPhotoSrcs = new Set(['/formacion.png', '/7cap.webp']);
+
 export function CourseGallerySection() {
 	const videos = courseGalleryMedia.filter(item => item.src.endsWith('.mp4'));
 	const images = courseGalleryMedia.filter(item => !item.src.endsWith('.mp4'));
+	const featuredPhotos = images.filter(image => featuredPhotoSrcs.has(image.src));
+	const masonryPhotos = images.filter(image => !featuredPhotoSrcs.has(image.src));
 
 	return (
 		<section className='section-spacing relative overflow-hidden bg-surface-base'>
@@ -56,29 +60,77 @@ export function CourseGallerySection() {
 						Fotos
 					</h3>
 
-					<div className='mt-6 columns-1 gap-4 sm:columns-2 sm:gap-5 lg:columns-3 lg:gap-6'>
-						{images.map((image, index) => (
-							<div
-								key={image.src}
-								className='reveal-soft mb-4 break-inside-avoid sm:mb-5 lg:mb-6'
-								style={{ animationDelay: `${index * 90}ms` }}
-							>
-								<ImageCard
-									src={image.src}
-									alt={image.alt}
-									width={image.width ?? 1200}
-									height={image.height ?? 900}
-									showCaption={false}
-									priority={index < 2}
-									className={
-										index > 0 && index % 4 === 0 ? 'sm:mt-3 lg:mt-4' : undefined
-									}
-									imageClassName={
-										photoAspectVariants[index % photoAspectVariants.length]
-									}
-								/>
-							</div>
-						))}
+					<div className='mt-6 grid gap-4 sm:grid-cols-[minmax(0,1.217fr)_minmax(0,1fr)] sm:gap-5 lg:gap-6'>
+						{featuredPhotos.map((image, index) => {
+							const shouldContainImage = image.fit === 'contain';
+							const width = image.width ?? 1200;
+							const height = image.height ?? 900;
+
+							return (
+								<div
+									key={image.src}
+									className='reveal-soft'
+									style={{ animationDelay: `${index * 90}ms` }}
+								>
+									<ImageCard
+										src={image.src}
+										alt={image.alt}
+										width={width}
+										height={height}
+										showCaption={false}
+										showOverlay={!shouldContainImage}
+										priority
+										imageClassName={
+											shouldContainImage
+												? 'object-contain'
+												: 'object-cover'
+										}
+										imageStyle={{ aspectRatio: `${width} / ${height}` }}
+									/>
+								</div>
+							);
+						})}
+					</div>
+
+					<div className='mt-4 columns-1 gap-4 sm:mt-5 sm:columns-2 sm:gap-5 lg:mt-6 lg:columns-3 lg:gap-6'>
+						{masonryPhotos.map((image, index) => {
+							const shouldContainImage = image.fit === 'contain';
+							const width = image.width ?? 1200;
+							const height = image.height ?? 900;
+
+							return (
+								<div
+									key={image.src}
+									className='reveal-soft mb-4 break-inside-avoid sm:mb-5 lg:mb-6'
+									style={{ animationDelay: `${index * 90}ms` }}
+								>
+									<ImageCard
+										src={image.src}
+										alt={image.alt}
+										width={width}
+										height={height}
+										showCaption={false}
+										showOverlay={!shouldContainImage}
+										priority={false}
+										className={
+											index > 0 && index % 4 === 0
+												? 'sm:mt-3 lg:mt-4'
+												: undefined
+										}
+										imageClassName={
+											shouldContainImage
+												? 'object-contain bg-brand-ink/5'
+												: photoAspectVariants[index % photoAspectVariants.length]
+										}
+										imageStyle={
+											shouldContainImage
+												? { aspectRatio: `${width} / ${height}` }
+												: undefined
+										}
+									/>
+								</div>
+							);
+						})}
 					</div>
 				</section>
 			</Container>

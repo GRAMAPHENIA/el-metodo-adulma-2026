@@ -42,35 +42,90 @@ export const instructorProfiles: InstructorProfile[] = [
 		id: 'mariela-trajterman',
 		name: 'Mariela Trajterman',
 		image: '/avatar/instructor-dos.webp',
-		role: 'Instructora certificada',
+		role: 'Instructora ',
 	},
 	{
 		id: 'mirta-gakbart',
 		name: 'Mirta Gakbart',
 		image: '/avatar/instructor-tres.webp',
-		role: 'Instructora certificada',
+		role: 'Instructora ',
 	},
 	{
 		id: 'manuela-miretti',
 		name: 'Manuela Miretti',
 		image: '/avatar/instructor-cuatro.webp',
-		role: 'Instructora certificada',
+		role: 'Instructora ',
 	},
 	{
 		id: 'araceli-pane',
 		name: 'Araceli E. Pane',
 		image: '/avatar/instructor-cinco.webp',
-		role: 'Instructora certificada',
+		role: 'Instructora ',
 	},
 	{
 		id: 'yanina-r-florentin',
-		name: 'Yanina R. Florentin',
-		image: '/avatar/instructor-seis.webp',
-		role: 'Instructora certificada',
+		name: 'Yanina Rosana Florentin',
+		image: '/avatar-new/yanina-florentin.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'claudia-varela',
+		name: 'Claudia Varela',
+		image: '/avatar/claudia-varela.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'nancy-fretes',
+		name: 'Lic. Nancy Fretes',
+		image: '/avatar-new/nancy-fretes.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'marcos-villareal',
+		name: 'Marcos Villarreal',
+		image: '/avatar-new/marcos-villareal.webp',
+		role: 'Instructor',
+	},
+	{
+		id: 'paula-sanchez',
+		name: 'Paula Sánchez',
+		image: '/avatar-new/paula-sanchez.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'rosanna-fontanella',
+		name: 'Profesora Rosanna Fontanella',
+		image: '/avatar-new/rosanna-fontanella.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'yamila-seguel',
+		name: 'Lic. Yamila Abigail Seguel',
+		image: '/avatar-new/yamila-seguel.webp',
+		role: 'Instructora',
+	},
+		{
+		id: 'vanesa-benetto',
+		name: 'Lic. Vanesa Gómez Benetto ',
+		image: '/avatar-new/vanesa-benetto.webp',
+		role: 'Instructora',
+	},
+			{
+		id: 'susana-perez',
+		name: 'Lic.  Susana Alejandra Pérez ',
+		image: '/avatar-new/susana-perez.webp',
+		role: 'Instructora',
 	},
 ];
 
 export const courseGalleryMedia: MediaAsset[] = [
+	{
+		src: '/formacion.png',
+		alt: 'Imagen de capacitaciones grupales',
+		width: 1850,
+		height: 1520,
+		fit: 'contain',
+	},
 	{
 		src: '/1cap.mp4',
 		poster: '/1cap.webp',
@@ -96,8 +151,8 @@ export const courseGalleryMedia: MediaAsset[] = [
 	{
 		src: '/7cap.webp',
 		alt: 'Imagen de clase de capacitación',
-		width: 900,
-		height: 650,
+		width: 502,
+		height: 502,
 	},
 	{
 		src: '/cap001.webp',

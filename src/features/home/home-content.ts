@@ -59,7 +59,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes de 11.00hs a 12.00hs y Miércoles y viernes de 10.00hs a 11.00hs ',
+				time: 'Lunes, miércoles y viernes de 10.00hs a 11.00hs ',
 				venue: 'Amigos de Florida',
 				address: 'Gral. San Martín 2442 Florida',
 			},

@@ -56,6 +56,7 @@ export type MediaAsset = {
 	width?: number;
 	height?: number;
 	poster?: string;
+	fit?: 'cover' | 'contain';
 };
 
 export type MethodTextCard = {

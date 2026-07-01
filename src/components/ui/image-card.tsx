@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
 
 import { cn } from '@/src/lib/utils/cn';
 
@@ -9,8 +10,10 @@ type ImageCardProps = {
 	height: number;
 	className?: string;
 	imageClassName?: string;
+	imageStyle?: CSSProperties;
 	priority?: boolean;
 	showCaption?: boolean;
+	showOverlay?: boolean;
 };
 
 export function ImageCard({
@@ -20,8 +23,10 @@ export function ImageCard({
 	height,
 	className,
 	imageClassName,
+	imageStyle,
 	priority = false,
 	showCaption = true,
+	showOverlay = true,
 }: ImageCardProps) {
 	return (
 		<figure
@@ -30,8 +35,12 @@ export function ImageCard({
 				className,
 			)}
 		>
-			<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-36 bg-gradient-to-t from-brand-ink/82 via-brand-ink/38 to-transparent' />
-			<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-14 shadow-[inset_0_-36px_40px_-20px_rgba(0,0,0,0.75)]' />
+			{showOverlay ? (
+				<>
+					<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-36 bg-gradient-to-t from-brand-ink/82 via-brand-ink/38 to-transparent' />
+					<div className='pointer-events-none absolute inset-x-0 bottom-0 z-10 h-14 shadow-[inset_0_-36px_40px_-20px_rgba(0,0,0,0.75)]' />
+				</>
+			) : null}
 			<Image
 				src={src}
 				alt={alt}
@@ -41,6 +50,7 @@ export function ImageCard({
 					'h-full w-full object-cover saturate-[.72] brightness-[.98] contrast-[1.02] group-hover:saturate-100 group-hover:brightness-100 group-hover:contrast-100',
 					imageClassName,
 				)}
+				style={imageStyle}
 				loading={priority ? 'eager' : 'lazy'}
 				priority={priority}
 				sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
