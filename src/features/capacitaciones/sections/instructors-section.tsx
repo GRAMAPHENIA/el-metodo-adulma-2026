@@ -49,6 +49,7 @@ const certificationItems = [
 			'yamila-seguel',
 			'vanesa-benetto',
 			'susana-perez',
+			'sol-potenze',
 		]),
 	},
 ];

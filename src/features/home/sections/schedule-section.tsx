@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { MdLocationOn } from 'react-icons/md';
 
 import { Container } from '@/src/components/ui/container';
@@ -7,6 +10,7 @@ import { locationCards } from '@/src/features/home/home-content';
 const INITIAL_VISIBLE_CARDS = 6;
 
 export function ScheduleSection() {
+	const [isExpanded, setIsExpanded] = useState(false);
 	const visibleCards = locationCards.slice(0, INITIAL_VISIBLE_CARDS);
 	const hiddenCards = locationCards.slice(INITIAL_VISIBLE_CARDS);
 
@@ -74,67 +78,84 @@ export function ScheduleSection() {
 				</div>
 
 				{hiddenCards.length > 0 ? (
-					<details className='group mt-8'>
-						<summary className='flex list-none justify-center'>
-							<div className='inline-flex min-h-12 items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold tracking-[0.03em] text-brand-ink shadow-[var(--shadow-soft-inset)] transition duration-[var(--duration-normal)] ease-[var(--ease-standard)] group-open:bg-brand-accent group-open:text-text-inverted'>
-								<span className='group-open:hidden'>Ver más salones</span>
-								<span className='hidden group-open:inline'>Ver menos salones</span>
-							</div>
-						</summary>
-
-						<div className='mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3'>
-							{hiddenCards.map(card => (
-								<article
-									key={card.id}
-									className='reveal-soft relative overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base p-6 shadow-card'
-								>
-									<div className='mb-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-brand-primary/30 text-brand-accent'>
-										<MdLocationOn aria-hidden='true' className='text-xl' />
-									</div>
-									<h3 className='font-serif text-3xl leading-none text-text-primary'>
-										{card.location}
-									</h3>
-									<p className='mt-2 text-sm font-medium text-brand-accent/85'>
-										{card.scheduleTitle}
-									</p>
-									<div className='mt-4 space-y-4 border-t border-brand-ink/8 pt-4'>
-										{card.schedules.map((scheduleBlock, index) => (
-											<div key={`${card.id}-${index}`} className='space-y-1.5'>
-												<p className='text-sm font-semibold text-text-primary'>
-													{scheduleBlock.time}
-												</p>
-												{scheduleBlock.times?.length ? (
-													<ul className='space-y-1 pt-1'>
-														{scheduleBlock.times.map(timeSlot => (
-															<li
-																key={`${card.id}-${timeSlot}`}
-																className='text-sm font-semibold text-text-primary'
-															>
-																{timeSlot}
-															</li>
-														))}
-													</ul>
-												) : null}
-												{scheduleBlock.venue ? (
-													<p className='pt-1 text-xs font-medium tracking-[0.03em] text-brand-ink'>
-														{scheduleBlock.venue}
-													</p>
-												) : null}
-												{scheduleBlock.note ? (
-													<p className='text-sm leading-relaxed text-text-secondary'>
-														{scheduleBlock.note}
-													</p>
-												) : null}
-												<p className='text-sm leading-relaxed text-text-secondary'>
-													{scheduleBlock.address}
-												</p>
+					<div className='mt-8 flex flex-col'>
+						<div
+							aria-hidden={!isExpanded}
+							className={`grid transition-[grid-template-rows,opacity] duration-[var(--duration-slow)] ease-[var(--ease-standard)] ${
+								isExpanded
+									? 'grid-rows-[1fr] opacity-100'
+									: 'grid-rows-[0fr] opacity-0'
+							}`}
+						>
+							<div className='overflow-hidden'>
+								<div className='grid gap-5 md:grid-cols-2 xl:grid-cols-3'>
+									{hiddenCards.map(card => (
+										<article
+											key={card.id}
+											className='reveal-soft relative overflow-hidden rounded-3xl border border-brand-ink/12 bg-surface-base p-6 shadow-card'
+										>
+											<div className='mb-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-brand-primary/30 text-brand-accent'>
+												<MdLocationOn aria-hidden='true' className='text-xl' />
 											</div>
-										))}
-									</div>
-								</article>
-							))}
+											<h3 className='font-serif text-3xl leading-none text-text-primary'>
+												{card.location}
+											</h3>
+											<p className='mt-2 text-sm font-medium text-brand-accent/85'>
+												{card.scheduleTitle}
+											</p>
+											<div className='mt-4 space-y-4 border-t border-brand-ink/8 pt-4'>
+												{card.schedules.map((scheduleBlock, index) => (
+													<div key={`${card.id}-${index}`} className='space-y-1.5'>
+														<p className='text-sm font-semibold text-text-primary'>
+															{scheduleBlock.time}
+														</p>
+														{scheduleBlock.times?.length ? (
+															<ul className='space-y-1 pt-1'>
+																{scheduleBlock.times.map(timeSlot => (
+																	<li
+																		key={`${card.id}-${timeSlot}`}
+																		className='text-sm font-semibold text-text-primary'
+																	>
+																		{timeSlot}
+																	</li>
+																))}
+															</ul>
+														) : null}
+														{scheduleBlock.venue ? (
+															<p className='pt-1 text-xs font-medium tracking-[0.03em] text-brand-ink'>
+																{scheduleBlock.venue}
+															</p>
+														) : null}
+														{scheduleBlock.note ? (
+															<p className='text-sm leading-relaxed text-text-secondary'>
+																{scheduleBlock.note}
+															</p>
+														) : null}
+														<p className='text-sm leading-relaxed text-text-secondary'>
+															{scheduleBlock.address}
+														</p>
+													</div>
+												))}
+											</div>
+										</article>
+									))}
+								</div>
+							</div>
 						</div>
-					</details>
+
+						<div className={`flex justify-center ${isExpanded ? 'mt-8' : ''}`}>
+							<button
+								type='button'
+								aria-expanded={isExpanded}
+								onClick={() => setIsExpanded(current => !current)}
+								className={`inline-flex min-h-12 cursor-pointer items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold tracking-[0.03em] text-brand-ink shadow-[var(--shadow-soft-inset)] transition duration-[var(--duration-normal)] ease-[var(--ease-standard)] hover:bg-brand-accent hover:text-text-inverted hover:shadow-card ${
+									isExpanded ? 'bg-brand-accent text-text-inverted' : ''
+								}`}
+							>
+								{isExpanded ? 'Ver menos salones' : 'Ver más salones'}
+							</button>
+						</div>
+					</div>
 				) : null}
 			</Container>
 		</section>

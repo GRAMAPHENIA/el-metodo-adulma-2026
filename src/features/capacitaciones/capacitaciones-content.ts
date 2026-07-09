@@ -34,7 +34,7 @@ export const instructorProfiles: InstructorProfile[] = [
 	},
 	{
 		id: 'juan-alfonso',
-		name: 'Profesor Juan P. Alfonso',
+		name: 'Prof. Juan Pablo Alfonso',
 		image: '/avatar/instructor-uno.webp',
 		role: 'Profesor de Educación Física, Coordinador.',
 	},
@@ -94,7 +94,7 @@ export const instructorProfiles: InstructorProfile[] = [
 	},
 	{
 		id: 'rosanna-fontanella',
-		name: 'Profesora Rosanna Fontanella',
+		name: 'Prof. Rosanna Fontanella',
 		image: '/avatar-new/rosanna-fontanella.webp',
 		role: 'Instructora',
 	},
@@ -106,7 +106,7 @@ export const instructorProfiles: InstructorProfile[] = [
 	},
 		{
 		id: 'vanesa-benetto',
-		name: 'Lic. Vanesa Gómez Benetto ',
+		name: 'Lic. Vanesa Gomez Benetto ',
 		image: '/avatar-new/vanesa-benetto.webp',
 		role: 'Instructora',
 	},
@@ -116,11 +116,17 @@ export const instructorProfiles: InstructorProfile[] = [
 		image: '/avatar-new/susana-perez.webp',
 		role: 'Instructora',
 	},
+				{
+		id: 'sol-potenze',
+		name: 'Prof. Sol Potenze',
+		image: '/avatar-new/sol-potenze.webp',
+		role: 'Instructora',
+	},
 ];
 
 export const courseGalleryMedia: MediaAsset[] = [
 	{
-		src: '/formacion.png',
+		src: '/formacion.webp',
 		alt: 'Imagen de capacitaciones grupales',
 		width: 1850,
 		height: 1520,
@@ -131,11 +137,11 @@ export const courseGalleryMedia: MediaAsset[] = [
 		poster: '/1cap.webp',
 		alt: 'Video de capacitación 1',
 	},
-	{
-		src: '/2cap.mp4',
-		poster: '/2cap.webp',
-		alt: 'Video de capacitación 2',
-	},
+	// {
+	// 	src: '/2cap.mp4',
+	// 	poster: '/2cap.webp',
+	// 	alt: 'Video de capacitación 2',
+	// },
 	{
 		src: '/4cap.webp',
 		alt: 'Imagen de capacitaciones grupales',

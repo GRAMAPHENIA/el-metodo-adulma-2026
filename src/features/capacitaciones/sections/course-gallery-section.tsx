@@ -13,7 +13,7 @@ const photoAspectVariants = [
 	'aspect-[4/3] xl:aspect-[16/10]',
 ];
 
-const featuredPhotoSrcs = new Set(['/formacion.png', '/7cap.webp']);
+const featuredPhotoSrcs = new Set(['/formacion.webp', '/7cap.webp']);
 
 export function CourseGallerySection() {
 	const videos = courseGalleryMedia.filter(item => item.src.endsWith('.mp4'));

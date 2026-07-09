@@ -72,7 +72,7 @@ export const locationCards: LocationCard[] = [
 		schedules: [
 			{
 				time: 'Martes y viernes ',
-				times: ['9.40hs a 10.40hs', '10.50hs a 11.50hs', '12.00hs a 13.00hs'],
+				times: ['9.30hs a 10.30hs', '10.50hs a 11.50hs', '12.00hs a 13.00hs'],
 				venue: 'La Redonda de Belgrano',
 				note: 'Entrada por secretaría parroquial',
 				address: 'Vuelta de Obligado 2042 Belgrano',
@@ -136,6 +136,18 @@ export const locationCards: LocationCard[] = [
 				venue: 'Iglesia Medalla Milagrosa',
 				note: 'Ingreso por Pasteur',
 				address: 'Las Heras 1839',
+			},
+		],
+	},
+	{
+		id: 'sarandi',
+		location: 'Sarandí',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Lunes y miércoles de 10.00hs a 11.00hs',
+				venue: 'Centro Sarandí 10',
+				address: 'Brandsen 2650',
 			},
 		],
 	},
