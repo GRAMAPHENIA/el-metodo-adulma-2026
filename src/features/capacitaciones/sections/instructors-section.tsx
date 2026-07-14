@@ -33,6 +33,7 @@ const certificationItems = [
 			'juan-alfonso',
 			'araceli-pane',
 			'mirta-gakbart',
+			'yani'
 		]),
 	},
 	{
@@ -50,6 +51,7 @@ const certificationItems = [
 			'vanesa-benetto',
 			'susana-perez',
 			'sol-potenze',
+			'maria-segunda-santamaria',
 		]),
 	},
 ];

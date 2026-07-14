@@ -122,6 +122,12 @@ export const instructorProfiles: InstructorProfile[] = [
 		image: '/avatar-new/sol-potenze.webp',
 		role: 'Instructora',
 	},
+					{
+		id: 'maria-segunda-santamaria',
+		name: 'María Segunda Santamaría',
+		image: '/avatar-new/maria-segunda-santamaria.webp',
+		role: 'Instructora',
+	},
 ];
 
 export const courseGalleryMedia: MediaAsset[] = [
