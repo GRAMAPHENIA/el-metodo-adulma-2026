@@ -33,7 +33,7 @@ const certificationItems = [
 			'juan-alfonso',
 			'araceli-pane',
 			'mirta-gakbart',
-			'yani'
+			'yanina-r-florentin',
 		]),
 	},
 	{
