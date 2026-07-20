@@ -1,4 +1,4 @@
-import type { LocationCard, MediaAsset } from '@/src/types/content';
+import type { LocationCard } from '@/src/types/content';
 
 export const homeHero = {
 	title:
@@ -150,23 +150,5 @@ export const locationCards: LocationCard[] = [
 				address: 'Brandsen 2650',
 			},
 		],
-	},
-];
-
-export const testimonialVideos: MediaAsset[] = [
-	{
-		src: '/testimonios/testimonio1.mp4',
-		poster: '/testimonios/testimonio1.webp',
-		alt: 'Testimonio en video 1',
-	},
-	{
-		src: '/testimonios/testimonio2.mp4',
-		poster: '/testimonios/testimonio2.webp',
-		alt: 'Testimonio en video 2',
-	},
-	{
-		src: '/testimonios/testimonio3.mp4',
-		poster: '/testimonios/testimonio3.webp',
-		alt: 'Testimonio en video 3',
 	},
 ];

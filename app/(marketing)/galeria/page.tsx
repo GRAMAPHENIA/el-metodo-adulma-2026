@@ -17,6 +17,16 @@ const PhotoGallerySection = dynamic(
 	},
 );
 
+const TestimonialsSection = dynamic(
+	() =>
+		import('@/src/features/galeria/sections/testimonials-section').then(
+			module => module.TestimonialsSection,
+		),
+	{
+		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
+	},
+);
+
 const VideoGallerySection = dynamic(
 	() =>
 		import('@/src/features/galeria/sections/video-gallery-section').then(
@@ -30,9 +40,9 @@ const VideoGallerySection = dynamic(
 const seoConfig: SeoPageConfig = {
 	title: 'Galería',
 	description:
-		'Imágenes y videos de clases, encuentros y capacitaciones de El Método Adulma.',
+		'Imágenes, testimonios y videos de clases, encuentros y capacitaciones de El Método Adulma.',
 	path: '/galeria',
-	keywords: ['galería', 'videos', 'adultos mayores', 'Método Adulma'],
+	keywords: ['galería', 'testimonios', 'videos', 'adultos mayores', 'Método Adulma'],
 };
 
 export const metadata: Metadata = buildPageMetadata(seoConfig);
@@ -53,6 +63,7 @@ export default function GaleriaPage() {
 				}}
 			/>
 			<PhotoGallerySection />
+			<TestimonialsSection />
 			<VideoGallerySection />
 			<LazyContactForm />
 		</>

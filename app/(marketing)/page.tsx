@@ -16,16 +16,6 @@ const ScheduleSection = dynamic(
 	},
 );
 
-const TestimonialsSection = dynamic(
-	() =>
-		import('@/src/features/home/sections/testimonials-section').then(
-			module => module.TestimonialsSection,
-		),
-	{
-		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
-	},
-);
-
 const seoConfig: SeoPageConfig = {
 	title: 'Inicio',
 	description:
@@ -47,7 +37,6 @@ export default function HomePage() {
 		<>
 			<HeroSection />
 			<ScheduleSection />
-			<TestimonialsSection />
 			<LazyContactForm />
 		</>
 	);

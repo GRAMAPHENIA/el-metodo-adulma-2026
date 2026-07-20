@@ -57,6 +57,24 @@ export const galleryImages: MediaAsset[] = [
 	},
 ];
 
+export const testimonialVideos: MediaAsset[] = [
+	{
+		src: '/testimonios/testimonio1.mp4',
+		poster: '/testimonios/testimonio1.webp',
+		alt: 'Testimonio en video 1',
+	},
+	{
+		src: '/testimonios/testimonio2.mp4',
+		poster: '/testimonios/testimonio2.webp',
+		alt: 'Testimonio en video 2',
+	},
+	{
+		src: '/testimonios/testimonio3.mp4',
+		poster: '/testimonios/testimonio3.webp',
+		alt: 'Testimonio en video 3',
+	},
+];
+
 export const galleryVideos: MediaAsset[] = [
 	{
 		src: '/galeria-videos/001.mp4',

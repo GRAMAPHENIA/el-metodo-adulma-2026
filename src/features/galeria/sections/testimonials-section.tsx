@@ -1,7 +1,7 @@
 import { Container } from '@/src/components/ui/container';
 import { SectionHeading } from '@/src/components/ui/section-heading';
 import { VideoCard } from '@/src/components/ui/video-card';
-import { testimonialVideos } from '@/src/features/home/home-content';
+import { testimonialVideos } from '@/src/features/galeria/galeria-content';
 
 export function TestimonialsSection() {
 	return (
