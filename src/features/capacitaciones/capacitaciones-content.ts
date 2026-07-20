@@ -143,11 +143,11 @@ export const courseGalleryMedia: MediaAsset[] = [
 		poster: '/1cap.webp',
 		alt: 'Video de capacitación 1',
 	},
-	// {
-	// 	src: '/2cap.mp4',
-	// 	poster: '/2cap.webp',
-	// 	alt: 'Video de capacitación 2',
-	// },
+	{
+		src: '/2cap.mp4',
+		poster: '/2cap.webp',
+		alt: 'Video de capacitación 2',
+	},
 	{
 		src: '/4cap.webp',
 		alt: 'Imagen de capacitaciones grupales',
