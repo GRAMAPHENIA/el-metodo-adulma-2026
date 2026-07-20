@@ -13,6 +13,9 @@ type ModalProps = {
 	title: string;
 	children: React.ReactNode;
 	fullScreenMobile?: boolean;
+	panelClassName?: string;
+	hideTitle?: boolean;
+	hideCloseButton?: boolean;
 };
 
 export function Modal({
@@ -21,6 +24,9 @@ export function Modal({
 	title,
 	children,
 	fullScreenMobile = false,
+	panelClassName,
+	hideTitle = false,
+	hideCloseButton = false,
 }: ModalProps) {
 	const panelRef = useRef<HTMLDivElement>(null);
 	const closeRef = useRef<HTMLButtonElement>(null);
@@ -30,7 +36,7 @@ export function Modal({
 		const previousFocus = document.activeElement as HTMLElement | null;
 		const previousOverflow = document.body.style.overflow;
 		document.body.style.overflow = 'hidden';
-		closeRef.current?.focus();
+		if (!hideCloseButton) closeRef.current?.focus();
 
 		const onKeyDown = (event: KeyboardEvent) => {
 			if (event.key === 'Escape') {
@@ -62,10 +68,22 @@ export function Modal({
 			window.removeEventListener('keydown', onKeyDown);
 			previousFocus?.focus();
 		};
-	}, [isOpen, onClose]);
+	}, [hideCloseButton, isOpen, onClose]);
 
 	if (!isOpen) return null;
 	if (typeof window === 'undefined') return null;
+
+	const closeButton = (
+		<button
+			ref={closeRef}
+			type='button'
+			onClick={onClose}
+			aria-label='Cerrar modal'
+			className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-brand-surface text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2'
+		>
+			<BsXLg aria-hidden='true' />
+		</button>
+	);
 
 	return createPortal(
 		<div
@@ -76,29 +94,29 @@ export function Modal({
 				<div
 					ref={panelRef}
 					className={cn(
+						'relative',
 						fullScreenMobile
 							? 'h-[100dvh] w-full overflow-y-auto border-0 bg-surface-base p-5 text-text-primary shadow-none sm:max-h-[calc(100dvh-2.5rem)] sm:max-w-3xl sm:border sm:border-brand-ink/20 sm:p-8 sm:shadow-floating'
 							: 'max-h-[calc(100dvh-2.5rem)] w-full max-w-3xl overflow-y-auto border border-brand-ink/20 bg-surface-base p-6 text-text-primary shadow-floating sm:p-8',
+						panelClassName,
 					)}
 					role='dialog'
 					aria-modal='true'
 					aria-label={title}
 					onClick={event => event.stopPropagation()}
 				>
-					<div className='mb-4 flex items-center justify-between gap-4 border-b border-brand-ink/15 pb-3'>
-						<h3 className='font-serif text-[length:var(--step-2)] uppercase'>
-							{title}
-						</h3>
-						<button
-							ref={closeRef}
-							type='button'
-							onClick={onClose}
-							aria-label='Cerrar modal'
-							className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-brand-surface text-brand-ink transition hover:bg-brand-accent hover:text-text-inverted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2'
-						>
-							<BsXLg aria-hidden='true' />
-						</button>
-					</div>
+					{hideTitle ? (
+						!hideCloseButton && (
+							<div className='absolute right-6 top-6 z-20'>{closeButton}</div>
+						)
+					) : (
+						<div className='mb-4 flex items-center justify-between gap-4 border-b border-brand-ink/15 pb-3'>
+							<h3 className='font-serif text-[length:var(--step-2)] uppercase'>
+								{title}
+							</h3>
+							{closeButton}
+						</div>
+					)}
 					<div className='space-y-4'>{children}</div>
 				</div>
 			</div>

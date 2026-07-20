@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 
 import { CreatorSection } from '@/src/features/metodo/sections/creator-section';
 import { TrainingOverviewSection } from '@/src/features/capacitaciones/sections/training-overview-section';
+import { InstructorToolsSection } from '@/src/features/capacitaciones/sections/instructor-tools-section';
 import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { getBreadcrumbJsonLd, getCourseJsonLd } from '@/src/lib/seo/jsonld';
 import { buildPageMetadata } from '@/src/lib/seo/metadata';
@@ -15,7 +16,9 @@ const InstructorsSection = dynamic(
 			module => module.InstructorsSection,
 		),
 	{
-		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
+		loading: () => (
+			<section className='section-spacing bg-surface-base' aria-hidden='true' />
+		),
 	},
 );
 
@@ -25,7 +28,9 @@ const CourseGallerySection = dynamic(
 			module => module.CourseGallerySection,
 		),
 	{
-		loading: () => <section className='section-spacing bg-surface-base' aria-hidden='true' />,
+		loading: () => (
+			<section className='section-spacing bg-surface-base' aria-hidden='true' />
+		),
 	},
 );
 
@@ -58,7 +63,7 @@ export default function CapacitacionesPage() {
 								name: 'Capacitaciones',
 								item: `${siteConfig.domain}/capacitaciones`,
 							},
-						])
+						]),
 					),
 				}}
 			/>
@@ -71,6 +76,7 @@ export default function CapacitacionesPage() {
 			<TrainingOverviewSection />
 			<CreatorSection mode='training' />
 			<InstructorsSection />
+			<InstructorToolsSection />
 			<CourseGallerySection />
 			<LazyContactForm />
 		</>
