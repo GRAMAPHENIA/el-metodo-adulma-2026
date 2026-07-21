@@ -9,7 +9,7 @@ export const courseInfo: CourseInfo = {
 	id: 'curso-online',
 	title: 'Curso de Formación Virtual',
 	introText:
-		'Formarte para dar clases con el Método ADULMA, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.',
+		'Formarte para dar clases con El METODO ADULMA®, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.',
 	secondaryText:
 		'Al hacerlo, vas a cultivar no solo herramientas para promover la autonomía y la calidad de vida —es decir, el bienestar de las personas mayores—, sino también la enorme satisfacción de contribuir a transformar vidas.',
 	enrollmentNotice:
@@ -30,7 +30,7 @@ export const instructorProfiles: InstructorProfile[] = [
 		id: 'ana-t-de-leon',
 		name: creatorContent.name,
 		image: creatorContent.image,
-		role: 'Creadora de EL MÉTODO ADULMA',
+		role: 'Creadora de El METODO ADULMA®',
 	},
 	{
 		id: 'juan-alfonso',
@@ -147,18 +147,6 @@ export const courseGalleryMedia: MediaAsset[] = [
 		src: '/2cap.mp4',
 		poster: '/2cap.webp',
 		alt: 'Video de capacitación 2',
-	},
-	{
-		src: '/4cap.webp',
-		alt: 'Imagen de capacitaciones grupales',
-		width: 900,
-		height: 650,
-	},
-	{
-		src: '/6cap.webp',
-		alt: 'Imagen de práctica en capacitaciones',
-		width: 900,
-		height: 650,
 	},
 	{
 		src: '/7cap.webp',

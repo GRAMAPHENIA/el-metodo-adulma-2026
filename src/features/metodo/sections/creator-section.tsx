@@ -104,7 +104,7 @@ export function CreatorSection({
 							<ul className='mt-3 m-0 flex w-full list-none flex-col items-start gap-1 p-0'>
 								<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
 									<MdVerified aria-hidden='true' className='mt-[0.05rem] h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary' />
-									<span className='min-w-0 whitespace-normal break-words'>Con certificación en EL METODO ADULMA presencial</span>
+									<span className='min-w-0 whitespace-normal break-words'>Con certificación en El METODO ADULMA® presencial</span>
 								</li>
 								<li className='flex items-start gap-2 text-[0.7rem] font-medium leading-tight text-text-primary'>
 									<MdVerified aria-hidden='true' className='mt-[0.05rem] h-[0.85rem] w-[0.85rem] shrink-0 text-text-primary' />

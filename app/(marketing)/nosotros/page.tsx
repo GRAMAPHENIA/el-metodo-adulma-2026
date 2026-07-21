@@ -11,7 +11,7 @@ import type { SeoPageConfig } from '@/src/types/content';
 const seoConfig: SeoPageConfig = {
 	title: 'El Método',
 	description:
-		'Conoce los fundamentos de El Método Adulma y el enfoque profesional para adultos mayores.',
+		'Conoce los fundamentos de El METODO ADULMA® y el enfoque profesional para adultos mayores.',
 	path: '/nosotros',
 	keywords: [
 		'El Método',
@@ -26,7 +26,7 @@ export const metadata: Metadata = buildPageMetadata(seoConfig);
 export default function NosotrosPage() {
 	return (
 		<>
-			<h1 className='sr-only'>El Método Adulma</h1>
+			<h1 className='sr-only'>El METODO ADULMA®</h1>
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

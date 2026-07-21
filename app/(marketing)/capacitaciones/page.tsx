@@ -37,7 +37,7 @@ const CourseGallerySection = dynamic(
 const seoConfig: SeoPageConfig = {
 	title: 'Capacitaciones',
 	description:
-		'Formación certificada para profesionales e instructores interesados en enseñar El Método Adulma.',
+		'Formación certificada para profesionales e instructores interesados en enseñar El METODO ADULMA®.',
 	path: '/capacitaciones',
 	keywords: [
 		'capacitaciones',
@@ -52,7 +52,7 @@ export const metadata: Metadata = buildPageMetadata(seoConfig);
 export default function CapacitacionesPage() {
 	return (
 		<>
-			<h1 className='sr-only'>Capacitaciones de El Método Adulma</h1>
+			<h1 className='sr-only'>Capacitaciones de El METODO ADULMA®</h1>
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

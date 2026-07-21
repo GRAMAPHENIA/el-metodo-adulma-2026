@@ -40,9 +40,9 @@ const VideoGallerySection = dynamic(
 const seoConfig: SeoPageConfig = {
 	title: 'Galería',
 	description:
-		'Imágenes, testimonios y videos de clases, encuentros y capacitaciones de El Método Adulma.',
+		'Imágenes, testimonios y videos de clases, encuentros y capacitaciones de El METODO ADULMA®.',
 	path: '/galeria',
-	keywords: ['galería', 'testimonios', 'videos', 'adultos mayores', 'Método Adulma'],
+	keywords: ['galería', 'testimonios', 'videos', 'adultos mayores', 'El METODO ADULMA®'],
 };
 
 export const metadata: Metadata = buildPageMetadata(seoConfig);
@@ -50,7 +50,7 @@ export const metadata: Metadata = buildPageMetadata(seoConfig);
 export default function GaleriaPage() {
 	return (
 		<>
-			<h1 className='sr-only'>Galería de El Método Adulma</h1>
+			<h1 className='sr-only'>Galería de El METODO ADULMA®</h1>
 			<script
 				type='application/ld+json'
 				dangerouslySetInnerHTML={{

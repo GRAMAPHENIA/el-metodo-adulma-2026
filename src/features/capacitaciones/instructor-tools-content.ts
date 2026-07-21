@@ -25,12 +25,12 @@ export const instructorToolsContent = {
 	products: [
 		{
 			id: 'lona-clases',
-			name: 'Lona El Método Adulma®',
+			name: 'Lona El METODO ADULMA®',
 			description: 'Ideal para tus clases, talleres y charlas.',
 			details: 'Mide 1 m × 70 cm',
 			image: {
 				src: '/productos/lona-clases.webp',
-				alt: 'Lona El Método Adulma',
+				alt: 'Lona El METODO ADULMA®',
 				width: 1340,
 				height: 1972,
 				className: 'max-h-[11rem]',
@@ -67,7 +67,7 @@ export const instructorToolsContent = {
 		{
 			id: 'remeras-coach',
 			name: 'Remeras para instructores',
-			description: 'Personalizadas con EL METODO ADULMA®. (Modelo COACH)',
+				description: 'Personalizadas con El METODO ADULMA®. (Modelo COACH)',
 			details: 'Talles S, M, L y XL',
 			image: {
 				src: '/productos/remeras-coach.webp',
@@ -94,7 +94,7 @@ export const instructorToolsContent = {
 	contact: {
 		label:
 			'Para adquirir cualquiera de estos productos contactarse con Juan Pablo Alfonso.',
-		note: 'Sólo apto para Instructores de El Método Adulma.',
+		note: 'Sólo apto para Instructores de El METODO ADULMA®.',
 		emailLabel: 'Solicitar al mail:',
 		email: 'alfonsojuanpablo00@gmail.com',
 	},

@@ -22,7 +22,7 @@ const seoConfig: SeoPageConfig = {
 		'Método integral para adultos mayores con enfoque en movimiento, cognición y bienestar comunitario.',
 	path: '/',
 	keywords: [
-		'Método Adulma',
+		'El METODO ADULMA®',
 		'adultos mayores',
 		'envejecimiento activo',
 		'bienestar',

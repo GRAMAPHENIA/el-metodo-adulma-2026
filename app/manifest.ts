@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: 'El Método Adulma',
+		name: 'El METODO ADULMA®',
 		short_name: 'Adulma',
 		description:
 			'Método integral para adultos mayores con foco en movimiento, cognición y bienestar.',

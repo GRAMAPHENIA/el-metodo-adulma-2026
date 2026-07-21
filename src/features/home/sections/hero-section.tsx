@@ -18,7 +18,7 @@ export function HeroSection() {
 			<Container className='relative z-10 py-[clamp(3.25rem,8vw,6rem)] pl-14'>
 				<div className='max-w-[76rem]'>
 					<p className='text-sm font-medium tracking-[0.03em] text-brand-accent/85'>
-						El Método Adulma
+						El METODO ADULMA®
 					</p>
 					<h1 className='mt-4 text-balance font-serif text-[clamp(1.9rem,3.7vw,3.2rem)] leading-[1.04] text-text-primary'>
 						{homeHero.title}

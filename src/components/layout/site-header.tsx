@@ -51,7 +51,7 @@ export function SiteHeader() {
 						href={socialLinks.instagram}
 						target='_blank'
 						rel='noreferrer noopener'
-						aria-label='Instagram de El Método Adulma'
+							aria-label='Instagram de El Método Adulma'
 						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface-base text-base text-brand-ink transition hover:bg-brand-primary/20 hover:text-brand-accent'
 					>
 						<BsInstagram aria-hidden='true' />
@@ -60,7 +60,7 @@ export function SiteHeader() {
 						href={socialLinks.facebook}
 						target='_blank'
 						rel='noreferrer noopener'
-						aria-label='Facebook de El Método Adulma'
+							aria-label='Facebook de El Método Adulma'
 						className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface-base text-base text-brand-ink transition hover:bg-brand-primary/20 hover:text-brand-accent'
 					>
 						<BsFacebook aria-hidden='true' />

@@ -4,7 +4,7 @@ export const homeHero = {
 	title:
 		'El Método para profesionales que desean enseñarlo y para adultos mayores que quieren practicarlo.',
 	description:
-		'Desde el año 2004, implementando EL MÉTODO ADULMA®, para la evolución de la enseñanza, recuperar el estado físico y la neuroplasticidad.',
+		'Desde el año 2004, implementando El METODO ADULMA®, para la evolución de la enseñanza, recuperar el estado físico y la neuroplasticidad.',
 	ctaLabel: 'Conoce El Método',
 	ctaHref: '/nosotros',
 	videoSrc: '/videocorto.mp4',

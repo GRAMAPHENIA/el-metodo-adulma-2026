@@ -1,7 +1,7 @@
 import type { NavItem, SiteConfig } from '@/src/types/content';
 
 export const siteConfig: SiteConfig = {
-	name: 'El Método Adulma',
+	name: 'El METODO ADULMA®',
 	description:
 		'Método integral para bienestar de adultos mayores, con cursos para profesionales e instructores.',
 	domain: 'https://elmetodoadulma.com',

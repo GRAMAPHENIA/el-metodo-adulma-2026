@@ -1,34 +1,34 @@
 import type { MethodTextCard } from '@/src/types/content';
 
 export const metodoPageContent = {
-	sectionTitle: 'El Método Adulma',
+	sectionTitle: 'El METODO ADULMA®',
 	sectionDescription:
 		'Conocé por qué este enfoque transforma tanto la enseñanza profesional como la práctica cotidiana en adultos mayores.',
 	leftColumnTitle: '¿Por qué enseñar El Método?',
 	rightColumnTitle: '¿Por qué aprender El Método?',
 	bottomText:
-		'Hace más de 25 años adultos mayores toman clases con EL MÉTODO ADULMA® donde se realiza un trabajo de investigación siempre consultando grupos de trabajo interdisciplinario de médicos clínicos, cardiólogos, gerontólogos, neurólogos, psiquiatras, psicólogos, kinesiólogos, profesores de educación física, nutricionistas, siempre actualizado, porque EL MÉTODO ADULMA® no espera épocas mejores, EL MÉTODO ADULMA® hace mejores las épocas.',
+		'Hace más de 25 años adultos mayores toman clases con El METODO ADULMA® donde se realiza un trabajo de investigación siempre consultando grupos de trabajo interdisciplinario de médicos clínicos, cardiólogos, gerontólogos, neurólogos, psiquiatras, psicólogos, kinesiólogos, profesores de educación física, nutricionistas, siempre actualizado, porque El METODO ADULMA® no espera épocas mejores, El METODO ADULMA® hace mejores las épocas.',
 };
 
 export const metodoLeftCards: MethodTextCard[] = [
 	{
 		id: 'ensenar-1',
-		text: 'Porque EL MÉTODO ADULMA®, creado en el año 2004, es un conjunto de elementos, actividades, temas y asuntos, que competen a los adultos mayores, para que proyectos, ideas y ganas de vivir la vida, puedan llevarlos a cabo todos y cada uno cuando está bien enseñado.',
+		text: 'Porque El METODO ADULMA®, creado en el año 2004, es un conjunto de elementos, actividades, temas y asuntos, que competen a los adultos mayores, para que proyectos, ideas y ganas de vivir la vida, puedan llevarlos a cabo todos y cada uno cuando está bien enseñado.',
 	},
 	{
 		id: 'ensenar-2',
-		text: 'EL MÉTODO ADULMA® apuesta a sus capacidades, sin subestimar aptitudes, virtudes y cualidades, desafiándolos siempre a ir por más, como la gente real de las imágenes de esta web, todos ellos practican EL MÉTODO ADULMA®.',
+		text: 'El METODO ADULMA® apuesta a sus capacidades, sin subestimar aptitudes, virtudes y cualidades, desafiándolos siempre a ir por más, como la gente real de las imágenes de esta web, todos ellos practican El METODO ADULMA®.',
 	},
 ];
 
 export const metodoRightCards: MethodTextCard[] = [
 	{
 		id: 'aprender-1',
-		text: 'Porque EL MÉTODO ADULMA® recupera habilidades perdidas, enlentecidas, mentes desorientadas, cuerpos rígidos y todo lo que el Adulto Mayor comienza a experimentar avanzado el paso de los años. Entonces, ¿la prevención en la vejez es factible? ¡Sí, y podemos estar preparados y tener una vejez saludable e independiente.',
+		text: 'Porque El METODO ADULMA® recupera habilidades perdidas, enlentecidas, mentes desorientadas, cuerpos rígidos y todo lo que el Adulto Mayor comienza a experimentar avanzado el paso de los años. Entonces, ¿la prevención en la vejez es factible? ¡Sí, y podemos estar preparados y tener una vejez saludable e independiente.',
 	},
 	{
 		id: 'aprender-2',
-		text: 'El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. EL MÉTODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experiméntalo vos mismo.',
+		text: 'El cuestionamiento debería ser: ¿cómo quiero vivir esta etapa? La salud física, mental y social son la clave. El METODO ADULMA® te enseña todo tipo de tips para tu salud integral. Solo debés probarlo, sentirlo y luego comparar cómo estabas antes de practicarlo. Que no te lo cuenten, experiméntalo vos mismo.',
 	},
 ];
 

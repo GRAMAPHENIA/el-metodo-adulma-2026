@@ -44,7 +44,7 @@ export function getCourseJsonLd() {
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'Course',
-		name: 'Curso online El Método Adulma',
+		name: 'Curso online El METODO ADULMA®',
 		description:
 			'Capacitación para profesionales e instructores orientada al bienestar de adultos mayores.',
 		provider: {

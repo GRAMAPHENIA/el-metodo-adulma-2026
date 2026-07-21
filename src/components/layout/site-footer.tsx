@@ -18,7 +18,7 @@ export function SiteFooter() {
 			<Container className='grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]'>
 				<section aria-labelledby='footer-manifiesto'>
 					<p className='text-sm font-medium tracking-[0.03em] text-brand-primary'>
-						El Método Adulma
+						El METODO ADULMA®
 					</p>
 					<h2
 						id='footer-manifiesto'
@@ -99,7 +99,7 @@ export function SiteFooter() {
 						Información legal
 					</h3>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
-						Se deja constancia que EL MÉTODO ADULMA es impartido de manera
+						Se deja constancia que El METODO ADULMA® es impartido de manera
 						directa por la Lic. Ana T. de León, creadora del mismo, en el salón
 						de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs
 						a 10.45hs, y en el salón de La Redonda de Belgrano, sito en Vuelta
@@ -108,7 +108,7 @@ export function SiteFooter() {
 					</p>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
 						Las personas que figuran en esta página han concurrido y finalizado
-						el curso de Formación de EL MÉTODO ADULMA. La aplicación y
+						el curso de Formación de El METODO ADULMA®. La aplicación y
 						transmisión de los conocimientos adquiridos durante la cursada por
 						parte de dichos instructores se realiza bajo su exclusiva
 						responsabilidad, siendo los únicos pasibles de las acciones que
@@ -118,7 +118,7 @@ export function SiteFooter() {
 			</Container>
 
 			<div className='mt-10 border-t border-brand-surface/20 pt-4 text-center text-xs text-brand-surface/70'>
-				Copyright {year} El Método Adulma. Todos los derechos reservados.{' '}
+				Copyright {year} El METODO ADULMA®. Todos los derechos reservados.{' '}
 				<span className='inline-block'>
 					desarrollado por{' '}
 					<a

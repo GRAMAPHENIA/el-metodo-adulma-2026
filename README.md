@@ -1,4 +1,4 @@
-# El Método Adulma - Next.js 2026 Refactor
+# El METODO ADULMA® - Next.js 2026 Refactor
 
 Sitio web migrado a **Next.js App Router + TypeScript estricto + Tailwind CSS** con arquitectura modular por dominio, SEO tecnico y accesibilidad WCAG 2.2 AA.
 

@@ -11,7 +11,7 @@ const finalizedInstructorProfiles = instructorProfiles.filter(
 
 const certificationItems = [
 	{
-		label: 'Con certificación en EL METODO ADULMA presencial',
+		label: 'Con certificación en El METODO ADULMA® presencial',
 		instructorIds: new Set([
 			'mariela-trajterman',
 			'mirta-gakbart',
@@ -63,7 +63,7 @@ export function InstructorsSection() {
 				<SectionHeading
 					eyebrow='CURSO'
 					title='Ellos lo han finalizado'
-					description='Ellos han finalizado con éxito los siguientes cursos certificados:'
+					description='Estos profesionales e Instructores que han completado la formación de El METODO ADULMA® son los únicos habilitados para dar clases.'
 					className='max-w-[76rem] text-left'
 				/>
 
