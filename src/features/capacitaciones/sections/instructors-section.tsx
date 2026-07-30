@@ -34,6 +34,7 @@ const certificationItems = [
 			'araceli-pane',
 			'mirta-gakbart',
 			'yanina-r-florentin',
+			'vanesa-benetto',
 		]),
 	},
 	{

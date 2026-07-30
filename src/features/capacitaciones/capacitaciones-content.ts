@@ -106,7 +106,7 @@ export const instructorProfiles: InstructorProfile[] = [
 	},
 		{
 		id: 'vanesa-benetto',
-		name: 'Lic. Vanesa Gomez Benetto ',
+		name: ' Vanesa Gomez Benetto ',
 		image: '/avatar-new/vanesa-benetto.webp',
 		role: 'Instructora',
 	},

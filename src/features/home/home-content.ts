@@ -151,4 +151,16 @@ export const locationCards: LocationCard[] = [
 			},
 		],
 	},
+	{
+		id: 'uruguay',
+		location: 'Uruguay',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Miércoles de 15.30 a 16.30hs',
+				venue: 'Club Porteros del Este',
+				address: 'Las Dalias entre Amapolas e Ibirapitá, Maldonado',
+			},
+		],
+	},
 ];
