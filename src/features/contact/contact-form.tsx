@@ -1,15 +1,20 @@
 'use client';
 
-import { ValidationError, useForm } from '@formspree/react';
 import { usePathname } from 'next/navigation';
-import { FormEvent, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+import type { FormEvent } from 'react';
 
 import { Button } from '@/src/components/ui/button';
 import { Container } from '@/src/components/ui/container';
 
 type LocalFeedbackState = {
-	status: 'idle' | 'error';
+	status: 'idle' | 'submitting' | 'success' | 'error';
 	message: string;
+};
+
+type ContactApiResponse = {
+	ok?: boolean;
+	message?: string;
 };
 
 type ContactFormProps = {
@@ -17,7 +22,6 @@ type ContactFormProps = {
 };
 
 export function ContactForm({ embedded = false }: ContactFormProps) {
-	const [formState, submitToFormspree] = useForm('xojnklno');
 	const pathname = usePathname();
 	const [feedback, setFeedback] = useState<LocalFeedbackState>({
 		status: 'idle',
@@ -28,20 +32,19 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const formData = new FormData(event.currentTarget);
+		if (feedback.status === 'submitting') return;
+
+		const form = event.currentTarget;
+		const formData = new FormData(form);
 
 		const honeypot = String(formData.get('website') ?? '');
-		const formStartedAt = Number(formData.get('formStartedAt') ?? Date.now());
 
 		if (honeypot.trim() !== '') {
-			setFeedback({
-				status: 'error',
-				message: 'Solicitud inválida.',
-			});
+			setFeedback({ status: 'success', message: '' });
 			return;
 		}
 
-		const elapsed = Date.now() - formStartedAt;
+		const elapsed = Date.now() - startedAt;
 		if (elapsed < 2500) {
 			setFeedback({
 				status: 'error',
@@ -50,20 +53,52 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 			return;
 		}
 
-		setFeedback({ status: 'idle', message: '' });
-		await submitToFormspree(event);
+		setFeedback({ status: 'submitting', message: '' });
+
+		try {
+			const response = await fetch('/api/contact.php', {
+				method: 'POST',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					name: String(formData.get('name') ?? ''),
+					lastName: String(formData.get('lastName') ?? ''),
+					email: String(formData.get('email') ?? ''),
+					phone: String(formData.get('phone') ?? ''),
+					message: String(formData.get('message') ?? ''),
+					website: honeypot,
+					sourcePath: pathname || '/',
+					elapsedMs: elapsed,
+				}),
+			});
+
+			const result = (await response
+				.json()
+				.catch(() => ({}))) as ContactApiResponse;
+
+			if (!response.ok || result.ok !== true) {
+				throw new Error(
+					result.message ||
+						'No pudimos enviar tu consulta. Intentá nuevamente.',
+				);
+			}
+
+			form.reset();
+			setFeedback({ status: 'success', message: '' });
+		} catch (error) {
+			setFeedback({
+				status: 'error',
+				message:
+					error instanceof Error
+						? error.message
+						: 'No pudimos enviar tu consulta. Intentá nuevamente.',
+			});
+		}
 	};
 
-	const hasFormError = Boolean(
-		formState.errors &&
-		(formState.errors.getFormErrors().length > 0 ||
-			formState.errors.getAllFieldErrors().length > 0),
-	);
-	const message = feedback.message
-		? feedback.message
-		: hasFormError
-			? 'No pudimos enviar tu consulta. Revisá los campos e inténtalo nuevamente.'
-			: '';
+	const isSubmitting = feedback.status === 'submitting';
 
 	const content = (
 		<Container className='relative'>
@@ -77,18 +112,25 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 							Hablemos sobre tu próximo paso
 						</h2>
 						<p className='mt-4 text-sm leading-relaxed text-text-secondary'>
-							Solicitá tu consulta con orientación clara para clases o
-							realizar el Curso de Formación.
+							Solicitá tu consulta con orientación clara para clases o realizar
+							el Curso de Formación.
 						</p>
 					</div>
 
 					<div className='rounded-2xl border border-brand-ink/10 bg-surface-base p-6 sm:p-7'>
-						{formState.succeeded ? (
-							<p className='text-center text-sm font-semibold text-feedback-success'>
+						{feedback.status === 'success' ? (
+							<p
+								role='status'
+								className='text-center text-sm font-semibold text-feedback-success'
+							>
 								Gracias por tu consulta. Te responderemos a la brevedad.
 							</p>
 						) : (
-							<form className='space-y-4' onSubmit={onSubmit} noValidate>
+							<form
+								className='space-y-4'
+								onSubmit={onSubmit}
+								aria-busy={isSubmitting}
+							>
 								<div className='grid gap-4 sm:grid-cols-2'>
 									<label className='block'>
 										<span className='mb-1 block text-[11px] font-medium tracking-[0.03em] text-brand-accent'>
@@ -97,6 +139,9 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 										<input
 											name='name'
 											required
+											minLength={2}
+											maxLength={80}
+											autoComplete='given-name'
 											className='min-h-11 w-full rounded-[0.875rem] border border-brand-ink/25 bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/25'
 										/>
 									</label>
@@ -107,6 +152,8 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 										</span>
 										<input
 											name='lastName'
+											maxLength={80}
+											autoComplete='family-name'
 											className='min-h-11 w-full rounded-[0.875rem] border border-brand-ink/25 bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/25'
 										/>
 									</label>
@@ -120,13 +167,9 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 										type='email'
 										name='email'
 										required
+										maxLength={120}
+										autoComplete='email'
 										className='min-h-11 w-full rounded-[0.875rem] border border-brand-ink/25 bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/25'
-									/>
-									<ValidationError
-										prefix='Email'
-										field='email'
-										errors={formState.errors}
-										className='mt-1 text-sm text-feedback-error'
 									/>
 								</label>
 
@@ -137,6 +180,8 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 									<input
 										type='tel'
 										name='phone'
+										maxLength={40}
+										autoComplete='tel'
 										className='min-h-11 w-full rounded-[0.875rem] border border-brand-ink/25 bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/25'
 									/>
 								</label>
@@ -149,13 +194,9 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 										name='message'
 										required
 										rows={5}
+										minLength={10}
+										maxLength={3000}
 										className='w-full rounded-[0.875rem] border border-brand-ink/25 bg-surface-base px-3 py-2 text-text-primary outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/25'
-									/>
-									<ValidationError
-										prefix='Mensaje'
-										field='message'
-										errors={formState.errors}
-										className='mt-1 text-sm text-feedback-error'
 									/>
 								</label>
 
@@ -167,37 +208,25 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 									className='hidden'
 									aria-hidden='true'
 								/>
-								<input type='hidden' name='formStartedAt' value={startedAt} />
-								<input
-									type='hidden'
-									name='sourcePath'
-									value={pathname || '/'}
-								/>
-
 								<div className='flex flex-wrap items-center gap-4 pt-4'>
 									<Button
 										type='submit'
-										disabled={formState.submitting}
+										disabled={isSubmitting}
 										className='px-6'
 									>
-										{formState.submitting ? 'Enviando...' : 'Enviar consulta'}
+										{isSubmitting ? 'Enviando...' : 'Enviar consulta'}
 									</Button>
 									<p
 										aria-live='polite'
 										className={`text-sm ${
-											feedback.status === 'error' || hasFormError
+											feedback.status === 'error'
 												? 'text-feedback-error'
 												: 'text-text-secondary'
 										}`}
 									>
-										{message}
+										{feedback.message}
 									</p>
 								</div>
-								<ValidationError
-									prefix='Formulario'
-									errors={formState.errors}
-									className='text-sm text-feedback-error'
-								/>
 							</form>
 						)}
 					</div>

@@ -104,7 +104,8 @@ export function SiteFooter() {
 						de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs
 						a 10.45hs, y en el salón de La Redonda de Belgrano, sito en Vuelta
 						de Obligado 2042, barrio de Belgrano, ingresando por Secretaría
-						Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de 12.00hs a 13.00hs.
+						Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de
+						12.00hs a 13.00hs.
 					</p>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
 						Las personas que figuran en esta página han concurrido y finalizado

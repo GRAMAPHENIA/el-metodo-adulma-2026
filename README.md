@@ -8,8 +8,7 @@ Sitio web migrado a **Next.js App Router + TypeScript estricto + Tailwind CSS** 
 - React 19
 - TypeScript estricto
 - Tailwind CSS + design tokens
-- Zod (validacion)
-- Formspree (formulario de contacto)
+- PHP + reenviador de Hostinger (formulario de contacto)
 - Plausible (analitica privacy-first, opcional)
 - pnpm
 
@@ -34,6 +33,19 @@ Crear `.env.local`:
 NEXT_PUBLIC_SITE_URL=https://elmetodoadulma.com
 PLAUSIBLE_DOMAIN=
 ```
+
+El formulario usa un endpoint PHP propio y no necesita credenciales de correo en
+Next.js ni en el navegador.
+
+## Formulario de contacto con Hostinger
+
+El navegador envía las consultas a `/api/contact.php`. El destinatario está fijado
+en el servidor como `consultas@elmetodoadulma.com`; Hostinger conserva la copia y
+reenvía el mensaje a la casilla configurada en hPanel. El destino no puede ser
+reemplazado desde el formulario ni desde el JavaScript público.
+
+El endpoint valida los campos, limita tamaño y frecuencia, usa un honeypot y
+configura `Reply-To` con el email de la persona para poder responderle directamente.
 
 ## Arquitectura
 
@@ -68,11 +80,15 @@ src/
 
 ## Deploy estatico (Hostinger)
 
-Este proyecto esta configurado con `output: 'export'`, por lo que el build genera una carpeta estatica:
+Este proyecto esta configurado con `output: 'export'`, por lo que el build genera
+una carpeta estática y verifica el endpoint PHP:
 
 ```bash
 pnpm build:hostinger
 ```
+
+El comando también rechaza archivos de entorno o referencias a proveedores
+anteriores dentro del paquete generado.
 
 Salida:
 
@@ -103,14 +119,18 @@ pnpm start
 - Borrar o mover archivos viejos del sitio.
 - Subir el contenido de `out/`.
 - Confirmar que `.htaccess` quede en la raiz de `public_html`.
+- Confirmar que `api/contact.php` quede en `public_html/api/contact.php`.
 
 4. Limpiar cache del navegador/CDN y validar:
 
 - Home, Capacitaciones, Galeria, Nosotros, Contacto.
 - Videos y formulario.
+- Llegada de una consulta real a `consultas@elmetodoadulma.com`.
 
 ### Notas importantes
 
 - En modo estatico no hay API backend de Next.js.
-- El formulario de contacto envia directamente a Formspree.
+- El formulario de contacto usa el endpoint PHP de Hostinger.
+- `pnpm start` sirve los archivos estáticos, pero no ejecuta PHP; el envío debe
+  probarse con un servidor PHP local o en Hostinger.
 - El repo incluye `public/.htaccess` con reglas de cache y compresion para Hostinger (Apache).
