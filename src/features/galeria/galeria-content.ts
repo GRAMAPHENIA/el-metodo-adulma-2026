@@ -79,16 +79,16 @@ export const galleryVideos: MediaAsset[] = [
 	{
 		src: '/galeria-videos/001.mp4',
 		poster: '/galeria-videos/001.webp',
+		alt: 'Video de galería 1',
+	},
+	{
+		src: '/galeria-videos/002.mp4',
+		poster: '/galeria-videos/002.webp',
 		alt: 'Video de galería 2',
 	},
 	{
-		src: '/galeria-videos/04.mp4',
-		poster: '/galeria-videos/04.webp',
-		alt: 'Video de galería 4',
-	},
-	{
-		src: '/galeria-videos/05.mp4',
-		poster: '/galeria-videos/05.webp',
-		alt: 'Video de galería 5',
+		src: '/galeria-videos/003.mp4',
+		poster: '/galeria-videos/003.webp',
+		alt: 'Video de galería 3',
 	},
 ];

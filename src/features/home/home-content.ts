@@ -37,6 +37,20 @@ export const locationCards: LocationCard[] = [
 		],
 	},
 	{
+		id: 'belgrano',
+		location: 'Belgrano',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Martes y viernes ',
+				times: ['9.30hs a 10.30hs', '10.50hs a 11.50hs', '12.00hs a 13.00hs'],
+				venue: 'La Redonda de Belgrano',
+				note: 'Entrada por secretaría parroquial',
+				address: 'Vuelta de Obligado 2042 Belgrano',
+			},
+		],
+	},
+	{
 		id: 'don-torcuato',
 		location: 'Don Torcuato',
 		scheduleTitle: 'Horarios',
@@ -62,20 +76,6 @@ export const locationCards: LocationCard[] = [
 				time: 'Lunes, miércoles y viernes de 10.00hs a 11.00hs ',
 				venue: 'Amigos de Florida',
 				address: 'Gral. San Martín 2442 Florida',
-			},
-		],
-	},
-	{
-		id: 'belgrano',
-		location: 'Belgrano',
-		scheduleTitle: 'Horarios',
-		schedules: [
-			{
-				time: 'Martes y viernes ',
-				times: ['9.30hs a 10.30hs', '10.50hs a 11.50hs', '12.00hs a 13.00hs'],
-				venue: 'La Redonda de Belgrano',
-				note: 'Entrada por secretaría parroquial',
-				address: 'Vuelta de Obligado 2042 Belgrano',
 			},
 		],
 	},
@@ -160,6 +160,30 @@ export const locationCards: LocationCard[] = [
 				time: 'Miércoles de 15.30 a 16.30hs',
 				venue: 'Club Porteros del Este',
 				address: 'Las Dalias entre Amapolas e Ibirapitá, Maldonado',
+			},
+		],
+	},
+	{
+		id: 'cordoba-luyaba',
+		location: 'Córdoba',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Jueves de 17.00hs a 18.00hs',
+				venue: 'Centro de Jubilados Luyaba',
+				address: 'Dpto. San Javier, Valle de Traslasierra, Córdoba',
+			},
+		],
+	},
+	{
+		id: 'flores',
+		location: 'Flores',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Martes y jueves de 10.00hs a 11.00hs',
+				venue: 'Asociación Calabresa suc. Flores',
+				address: 'Yerbal 2636',
 			},
 		],
 	},
