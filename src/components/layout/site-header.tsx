@@ -18,8 +18,8 @@ export function SiteHeader() {
 					<Image
 						src='/logo-navbar.webp'
 						alt='Logo de El Método Adulma'
-						width={240}
-						height={125}
+						width={1535}
+						height={1024}
 						className='h-12 w-auto rounded-2xl'
 						priority
 					/>

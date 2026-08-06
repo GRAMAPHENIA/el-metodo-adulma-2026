@@ -11,6 +11,18 @@ export const homeHero = {
 	poster: '/videocorto.webp',
 };
 
+export const pressFeature = {
+	eyebrow: 'En los medios',
+	title: 'El Método Adulma ya está en Uruguay',
+	description:
+		'El diario El País de Uruguay conversó con la creadora Ana T. de León sobre una propuesta que integra estimulación física, cognitiva y social para acompañar un envejecimiento activo y saludable.',
+	source: 'El País · Uruguay · 30 de julio de 2026',
+	articleTitle:
+		'La propuesta que promueve un envejecimiento activo y saludable',
+	ctaLabel: 'Leer la nota completa',
+	href: 'https://www.elpais.com.uy/bienestar/vida-sana/el-metodo-adulma-ya-esta-en-uruguay-como-es-la-propuesta-que-promueve-un-envejecimiento-activo-y-saludable',
+};
+
 export const locationCards: LocationCard[] = [
 	{
 		id: 'olivos-manana',
@@ -18,7 +30,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horario de mañana',
 		schedules: [
 			{
-				time: 'Lunes y jueves de 10.30hs a 11.30hs',
+				time: 'Lunes y jueves de 9.45hs a 10.45hs',
 				venue: 'Salón al fondo',
 				address: 'R. Gutiérrez 1372 Olivos',
 			},

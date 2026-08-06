@@ -53,6 +53,8 @@ const certificationItems = [
 			'susana-perez',
 			'sol-potenze',
 			'maria-segunda-santamaria',
+			'maria-clara-del-marmol',
+			'veronica-florentin',
 		]),
 	},
 ];

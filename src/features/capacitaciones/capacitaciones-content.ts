@@ -128,6 +128,18 @@ export const instructorProfiles: InstructorProfile[] = [
 		image: '/avatar-new/maria-segunda-santamaria.webp',
 		role: 'Instructora',
 	},
+	{
+		id: 'maria-clara-del-marmol',
+		name: 'María Clara del Marmol',
+		image: '/avatar-new/clara-marmol.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'veronica-florentin',
+		name: 'Lic. Verónica Florentín',
+		image: '/avatar-new/veronica-florentin.webp',
+		role: 'Instructora',
+	},
 ];
 
 export const courseGalleryMedia: MediaAsset[] = [

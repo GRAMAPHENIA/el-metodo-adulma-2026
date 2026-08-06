@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 
 import { LazyContactForm } from '@/src/features/contact/lazy-contact-form';
 import { HeroSection } from '@/src/features/home/sections/hero-section';
+import { PressFeatureSection } from '@/src/features/home/sections/press-feature-section';
 import { buildPageMetadata } from '@/src/lib/seo/metadata';
 import type { SeoPageConfig } from '@/src/types/content';
 
@@ -37,6 +38,7 @@ export default function HomePage() {
 		<>
 			<HeroSection />
 			<ScheduleSection />
+			<PressFeatureSection />
 			<LazyContactForm />
 		</>
 	);

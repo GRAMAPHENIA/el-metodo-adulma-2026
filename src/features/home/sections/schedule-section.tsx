@@ -6,7 +6,10 @@ import { locationCards } from '@/src/features/home/home-content';
 
 export function ScheduleSection() {
 	return (
-		<section className='section-spacing relative overflow-hidden bg-surface-base'>
+		<section
+			id='salones'
+			className='section-spacing relative overflow-hidden bg-surface-base'
+		>
 			<Container className='relative'>
 				<SectionHeading
 					eyebrow='Salones y horarios'

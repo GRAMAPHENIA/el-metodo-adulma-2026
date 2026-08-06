@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import type { FormEvent } from 'react';
@@ -109,11 +110,24 @@ export function ContactForm({ embedded = false }: ContactFormProps) {
 							Contacto
 						</p>
 						<h2 className='mt-3 font-serif text-[clamp(1.85rem,4vw,3rem)] leading-[1.02] text-brand-ink'>
-							Hablemos sobre tu próximo paso
+							Escribí tu consulta
 						</h2>
 						<p className='mt-4 text-sm leading-relaxed text-text-secondary'>
-							Solicitá tu consulta con orientación clara para clases o realizar
-							el Curso de Formación.
+							Para participar de las clases,{' '}
+							<Link
+								href='/#salones'
+								className='font-semibold text-brand-accent underline decoration-brand-accent/40 underline-offset-4 hover:text-brand-ink'
+							>
+								ver espacios activos de El Método
+							</Link>
+							; o para realizar el Curso de Formación,{' '}
+							<Link
+								href='/capacitaciones'
+								className='font-semibold text-brand-accent underline decoration-brand-accent/40 underline-offset-4 hover:text-brand-ink'
+							>
+								ver toda la información en Capacitaciones
+							</Link>
+							.
 						</p>
 					</div>
 
