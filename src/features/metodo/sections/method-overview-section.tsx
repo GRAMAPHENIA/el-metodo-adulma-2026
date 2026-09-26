@@ -18,6 +18,9 @@ function MethodTextCard({ text }: { text: string }) {
 	);
 }
 
+const columnTitleClassName =
+	'mt-0 flex min-h-16 items-center justify-center overflow-hidden rounded-r-2xl border-l-4 border-brand-primary bg-surface-muted/70 px-4 py-4 text-center font-serif text-balance text-[clamp(1.35rem,2vw,2.4rem)] leading-[1.08] tracking-[-0.03em] text-text-primary shadow-[0_8px_20px_rgba(75,56,33,0.08)] sm:px-5 sm:py-5 lg:min-h-[6rem] lg:leading-[1.12]';
+
 export function MethodOverviewSection() {
 	return (
 		<section className='section-spacing relative overflow-hidden bg-surface-base'>
@@ -31,7 +34,7 @@ export function MethodOverviewSection() {
 
 				<div className='mt-8 space-y-6 lg:hidden'>
 					<div className='space-y-5'>
-						<h3 className='flex min-h-16 items-center justify-center overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base px-5 py-3 text-center font-serif text-[length:var(--step-2)] leading-[0.95] text-brand-accent shadow-card'>
+						<h3 className={columnTitleClassName}>
 							{metodoPageContent.leftColumnTitle}
 						</h3>
 						<MethodTextCard text={metodoLeftCards[0]?.text ?? ''} />
@@ -39,7 +42,7 @@ export function MethodOverviewSection() {
 					</div>
 
 					<div className='space-y-5'>
-						<h3 className='flex min-h-16 items-center justify-center overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base px-5 py-3 text-center font-serif text-[length:var(--step-2)] leading-[0.95] text-brand-accent shadow-card'>
+						<h3 className={columnTitleClassName}>
 							{metodoPageContent.rightColumnTitle}
 						</h3>
 						<MethodTextCard text={metodoRightCards[0]?.text ?? ''} />
@@ -48,10 +51,10 @@ export function MethodOverviewSection() {
 				</div>
 
 				<div className='mx-auto mt-8 hidden max-w-[76rem] items-stretch gap-6 lg:grid lg:grid-cols-2'>
-					<h3 className='flex min-h-16 items-center justify-center overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base px-5 py-3 text-center font-serif text-[length:var(--step-2)] leading-[0.95] text-brand-accent shadow-card'>
+					<h3 className={columnTitleClassName}>
 						{metodoPageContent.leftColumnTitle}
 					</h3>
-					<h3 className='flex min-h-16 items-center justify-center overflow-hidden rounded-2xl border border-brand-ink/12 bg-surface-base px-5 py-3 text-center font-serif text-[length:var(--step-2)] leading-[0.95] text-brand-accent shadow-card'>
+					<h3 className={columnTitleClassName}>
 						{metodoPageContent.rightColumnTitle}
 					</h3>
 					<MethodTextCard text={metodoLeftCards[0]?.text ?? ''} />

@@ -35,6 +35,7 @@ const certificationItems = [
 			'mirta-gakbart',
 			'yanina-r-florentin',
 			'vanesa-benetto',
+			'maite-deleon',
 		]),
 	},
 	{
@@ -55,6 +56,7 @@ const certificationItems = [
 			'maria-segunda-santamaria',
 			'maria-clara-del-marmol',
 			'veronica-florentin',
+			'maite-deleon',
 		]),
 	},
 ];
@@ -67,7 +69,7 @@ export function InstructorsSection() {
 					eyebrow='CURSO'
 					title='Ellos lo han finalizado'
 					description='Estos profesionales e Instructores que han completado la formación de El METODO ADULMA® son los únicos habilitados para dar clases.'
-					descriptionClassName='mt-6 max-w-4xl border-l-4 border-brand-primary bg-surface-muted/70 px-5 py-4 font-serif text-[length:var(--step-1)] font-medium leading-snug text-text-primary shadow-[0_8px_20px_rgba(75,56,33,0.08)] sm:px-6'
+					descriptionClassName='mt-6 max-w-4xl rounded-r-2xl border-l-4 border-brand-primary bg-surface-muted/70 px-5 py-4 font-serif text-[length:var(--step-1)] font-medium leading-snug text-text-primary shadow-[0_8px_20px_rgba(75,56,33,0.08)] sm:px-6'
 					className='max-w-[76rem] text-left'
 				/>
 

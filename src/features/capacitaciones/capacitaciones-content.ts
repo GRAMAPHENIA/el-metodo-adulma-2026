@@ -11,7 +11,7 @@ export const courseInfo: CourseInfo = {
 	introText:
 		'Formarte para dar clases con El METODO ADULMA®, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.',
 	secondaryText:
-		'Al hacerlo, vas a cultivar no solo herramientas para promover la autonomía y la calidad de vida —es decir, el bienestar de las personas mayores—, sino también la enorme satisfacción de contribuir a transformar vidas.',
+		'Al hacerlo, vas a cultivar  no solo herramientas para promover la autonomía y la calidad de vida para el bienestar de las Personas Mayores, también vas a experimentar la enorme satisfacción de contribuir a transformar sus vidas.',
 	enrollmentNotice:
 		'"Aquellos alumnos del exterior que estén interesados en inscribirse pueden hacerlo abonando con tarjeta de débito o crédito. El monto que se les descuenta va a depender del cambio de la moneda, pero sí, deben calcular su moneda a pesos argentinos. También puede ocurrir que algunos bancos rechacen la transacción ya que deben notificarles previamente de la compra (esto último va a depender de cada banco y sus normativas). Recomiendo que, si algún interesado del exterior no puede realizar el pago, primero consulte con su banco."',
 	ctaLabel: 'Programa e información',
@@ -138,6 +138,12 @@ export const instructorProfiles: InstructorProfile[] = [
 		id: 'veronica-florentin',
 		name: 'Lic. Verónica Florentín',
 		image: '/avatar-new/veronica-florentin.webp',
+		role: 'Instructora',
+	},
+	{
+		id: 'maite-deleon',
+		name: 'Maité de León',
+		image: '/avatar-new/maite-deleon.webp',
 		role: 'Instructora',
 	},
 ];
