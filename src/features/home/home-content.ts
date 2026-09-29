@@ -237,4 +237,16 @@ export const locationCards: LocationCard[] = [
 			},
 		],
 	},
+	{
+		id: 'flores-espanola',
+		location: 'Flores',
+		scheduleTitle: 'Horarios',
+		schedules: [
+			{
+				time: 'Martes y jueves de 14:30 a 15:30 hs',
+				venue: 'Asociación Española de Flores',
+				address: 'Pedernera 143',
+			},
+		],
+	},
 ];

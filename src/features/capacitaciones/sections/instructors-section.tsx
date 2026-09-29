@@ -18,6 +18,7 @@ const certificationItems = [
 			'manuela-miretti',
 			'araceli-pane',
 			'yanina-r-florentin',
+			'veronica-florentin',
 		]),
 	},
 	{
