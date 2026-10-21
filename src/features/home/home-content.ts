@@ -93,18 +93,6 @@ export const locationCards: LocationCard[] = [
 		],
 	},
 	{
-		id: 'florida',
-		location: 'Florida',
-		scheduleTitle: 'Horarios',
-		schedules: [
-			{
-				time: 'Lunes, miércoles y viernes de 10.00hs a 11.00hs ',
-				venue: 'Amigos de Florida',
-				address: 'Gral. San Martín 2442 Florida',
-			},
-		],
-	},
-	{
 		id: 'tigre',
 		location: 'Tigre',
 		scheduleTitle: 'Horarios',
@@ -118,14 +106,13 @@ export const locationCards: LocationCard[] = [
 		],
 	},
 	{
-		id: 'san-miguel-moreno',
-		location: 'San Miguel Moreno',
+		id: 'munro',
+		location: 'Munro',
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Martes y jueves de 16.00hs a 17.00hs',
-				venue: 'Salón Lobos',
-				address: 'Pedro Ignacio Rivera 757',
+				time: 'Lunes y jueves de 11.15hs a 12.15hs',
+				address: 'Bernardino Rivadavia 2350, Munro',
 			},
 		],
 	},
@@ -141,13 +128,14 @@ export const locationCards: LocationCard[] = [
 		],
 	},
 	{
-		id: 'munro',
-		location: 'Munro',
+		id: 'florida',
+		location: 'Florida',
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes y jueves de 11.15hs a 12.15hs',
-				address: 'Bernardino Rivadavia 2350, Munro',
+				time: 'Lunes, miércoles y viernes de 10.00hs a 11.00hs ',
+				venue: 'Amigos de Florida',
+				address: 'Gral. San Martín 2442 Florida',
 			},
 		],
 	},
