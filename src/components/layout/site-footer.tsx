@@ -107,7 +107,7 @@ export function SiteFooter() {
 					Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de
 					12.00hs a 13.00hs, y en el salón de la Asociación de Cultura Inglesa,
 					sito en Suipacha 1333, Retiro-Recoleta, los días lunes y jueves de
-					11.30hs a 12.30hs, y en el salón de Tigre, sito en Av. Cazón 1336,
+					11.30hs a 12.30hs, y por el Prof. Juan P. Alfonso. en el salón de Tigre, sito en Av. Cazón 1336,
 					los martes y jueves de 9:45hs a 10.45hs.
 					</p>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
