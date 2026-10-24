@@ -102,14 +102,15 @@ export function SiteFooter() {
 						Se deja constancia que El METODO ADULMA® es impartido de manera
 						directa por la Lic. Ana T. de León, creadora del mismo, en el salón
 						de Ricardo Gutiérrez 1372, Olivos, los días lunes y jueves de 9.45hs
-					a 10.45hs, en el salón de La Redonda de Belgrano, sito en Vuelta
-					de Obligado 2042, barrio de Belgrano, ingresando por Secretaría
-					Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de
-					12.00hs a 13.00hs, y en el salón de la Asociación de Cultura Inglesa,
-					sito en Suipacha 1333, Retiro-Recoleta, los días lunes y jueves de
-					11.30hs a 12.30hs, y por el Prof. Juan P. Alfonso. en el salón de Tigre, sito en Av. Cazón 1336,
-					los martes y jueves de 9:45hs a 10.45hs.
-					</p>
+						a 10.45hs, en el salón de La Redonda de Belgrano, sito en Vuelta
+						de Obligado 2042, barrio de Belgrano, ingresando por Secretaría
+						Parroquial, los días martes y viernes de 10.50hs a 11.50hs y de
+						12.00hs a 13.00hs, y en el salón de la Asociación de Cultura Inglesa,
+						sito en Suipacha 1333, Retiro-Recoleta, los días lunes y jueves de
+						11.30hs a 12.30hs. Asimismo, es impartido por el Prof. Juan Pablo
+						Alfonso en el salón de Tigre, sito en Av. Cazón
+						1336, los martes y jueves de 9:45hs a 10.45hs.
+						</p>
 					<p className='mt-4 text-xs leading-relaxed text-brand-surface/85 sm:text-[13px]'>
 						Las personas que figuran en esta página han concurrido y finalizado
 						el curso de Formación de El METODO ADULMA®. La aplicación y

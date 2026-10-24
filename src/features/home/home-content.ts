@@ -87,7 +87,6 @@ export const locationCards: LocationCard[] = [
 			{
 				time: 'Lunes y jueves de 11.30hs a 12.30hs',
 				venue: 'Asociación de Cultura Inglesa',
-				note: '20, 24 y 31 de agosto Clases gratuitas',
 				address: 'Suipacha 1333',
 			},
 		],
