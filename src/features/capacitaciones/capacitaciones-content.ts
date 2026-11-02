@@ -15,7 +15,7 @@ export const courseInfo: CourseInfo = {
 	enrollmentNotice:
 		'"Aquellos alumnos del exterior que estén interesados en inscribirse pueden hacerlo abonando con tarjeta de débito o crédito. El monto que se les descuenta va a depender del cambio de la moneda, pero sí, deben calcular su moneda a pesos argentinos. También puede ocurrir que algunos bancos rechacen la transacción ya que deben notificarles previamente de la compra (esto último va a depender de cada banco y sus normativas). Recomiendo que, si algún interesado del exterior no puede realizar el pago, primero consulte con su banco."',
 	ctaLabel: 'Programa e información',
-	ctaHref: 'https://web3.egama.org.ar/campus/mod/assign/view.php?id=77641',
+	ctaHref: 'https://www.ama-med.org.ar/especialidades/detalleCurso/701',
 	learnMoreLabel: 'Saber más',
 	learnMoreContent: [
 		'Esta formación está orientada a profesionales que deseen ampliar sus oportunidades laborales y contribuir activamente al bienestar de las personas mayores, incorporando estrategias de autocuidado, autovaloración y prevención.',
