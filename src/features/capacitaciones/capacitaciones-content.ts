@@ -9,13 +9,13 @@ export const courseInfo: CourseInfo = {
 	id: 'curso-online',
 	title: 'Curso de Formación Virtual',
 	introText:
-		'Formarte para dar clases con El METODO ADULMA®, basado en la estimulación mental a través del movimiento, la práctica de ejercicios físicos y cognitivos en paralelo, el espíritu entusiasta y el acompañamiento social, significa convertirte en parte activa y eficiente de un cambio hacia un envejecimiento saludable, activo, creativo y pleno de vitalidad para esta comunidad.',
+		'Formarte en El MÉTODO ADULMA® te permite sumar herramientas a tu profesión, trabajo, o dar clases, abordando 12 áreas organizadas en seis dimensiones: física, cognitiva-ejecutiva, sensorial-perceptiva, socioemocional, neuropsicomotriz y social-comunicacional (vínculos, cooperación, pertenencia y comunicación verbal y no verbal), atravesadas por una dimensión transversal fundamental: la integración multisensorial y la capacidad de realizar múltiples tareas de forma simultánea. Te vamos a dar todas las herramientas.',
 	secondaryText:
-		'Al hacerlo, vas a cultivar  no solo herramientas para promover la autonomía y la calidad de vida para el bienestar de las Personas Mayores, también vas a experimentar la enorme satisfacción de contribuir a transformar sus vidas.',
+		'Al hacerlo, vas a cultivar nuevos conocimientos, promoviendo la autonomía y la calidad de vida para el bienestar de las Personas Mayores. También vas a experimentar la enorme satisfacción de contribuir a transformar sus vidas.',
 	enrollmentNotice:
 		'"Aquellos alumnos del exterior que estén interesados en inscribirse pueden hacerlo abonando con tarjeta de débito o crédito. El monto que se les descuenta va a depender del cambio de la moneda, pero sí, deben calcular su moneda a pesos argentinos. También puede ocurrir que algunos bancos rechacen la transacción ya que deben notificarles previamente de la compra (esto último va a depender de cada banco y sus normativas). Recomiendo que, si algún interesado del exterior no puede realizar el pago, primero consulte con su banco."',
 	ctaLabel: 'Programa e información',
-	ctaHref: 'https://www.ama-med.org.ar/especialidades/detalleCurso/701',
+	ctaHref: 'https://web3.egama.org.ar/campus/mod/assign/view.php?id=77641',
 	learnMoreLabel: 'Saber más',
 	learnMoreContent: [
 		'Esta formación está orientada a profesionales que deseen ampliar sus oportunidades laborales y contribuir activamente al bienestar de las personas mayores, incorporando estrategias de autocuidado, autovaloración y prevención.',
