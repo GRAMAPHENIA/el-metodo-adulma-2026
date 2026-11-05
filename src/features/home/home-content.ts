@@ -85,7 +85,7 @@ export const locationCards: LocationCard[] = [
 		scheduleTitle: 'Horarios',
 		schedules: [
 			{
-				time: 'Lunes y jueves de 11.30hs a 12.30hs',
+				time: 'Lunes de 11.30hs a 12.30hs',
 				venue: 'Asociación de Cultura Inglesa',
 				address: 'Suipacha 1333',
 			},
@@ -224,16 +224,16 @@ export const locationCards: LocationCard[] = [
 			},
 		],
 	},
-	{
-		id: 'flores-espanola',
-		location: 'Flores',
-		scheduleTitle: 'Horarios',
-		schedules: [
-			{
-				time: 'Martes y jueves de 14:30 a 15:30 hs',
-				venue: 'Asociación Española de Flores',
-				address: 'Pedernera 143',
-			},
-		],
-	},
+	// {
+	// 	id: 'flores-espanola',
+	// 	location: 'Flores',
+	// 	scheduleTitle: 'Horarios',
+	// 	schedules: [
+	// 		{
+	// 			time: 'Martes y jueves de 14:30 a 15:30 hs',
+	// 			venue: 'Asociación Española de Flores',
+	// 			address: 'Pedernera 143',
+	// 		},
+	// 	],
+	// },
 ];
